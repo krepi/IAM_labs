@@ -6,11 +6,13 @@ Write-Host "--- LOGIN LENGTH CHECKING ... ---" -ForegroundColor Cyan
 # 2. Pętla przechodząca przez każdy login
 foreach ($Login in $Loginy) {
 
-   
-    
-    if ( $Login.Length -lt 8 ) {
+   if ( $Login.Length -lt 8 ) {
        
         Write-Host "ALERT: Login '$Login' is to short!" -ForegroundColor Red
     }
 }
 
+$users = @("Alpha", "Bravo", "Charlie", "Delta")
+foreach ($user in $users) {
+    Write-Host "[IAM LOGIN]'$user'"
+}
