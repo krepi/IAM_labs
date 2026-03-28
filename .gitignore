@@ -25,18 +25,33 @@ dist/
 *.log
 secrets.json
 .python-hosting-api-key
+credentials.json
+client_secret.json
+oauth_token.json
+
+# Certyfikaty, klucze i autoryzacja
 *.pem
 *.key
 *.cer
 *.pfx
 *.p12
 *.pub
+*.ppk
+
+# MSAL / OAuth / Automatyzacja IAM
+*token_cache*
+*msal_cache*
+.identity/
 
 # Azure Specific
 .azure/
 az_session.json
 local.settings.json
 appsettings.Development.json
+
+# Szablony ARM / Bicep
+*.parameters.json
+!.parameters.example.json
 
 # Infrastructure as Code (Terraform)
 .terraform/
@@ -47,4 +62,3 @@ appsettings.Development.json
 # PowerShell
 .history
 nm_session.json
-"@
