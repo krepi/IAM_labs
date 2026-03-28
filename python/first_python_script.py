@@ -1,4 +1,4 @@
-emails = ["marcin.kowalski@org", "roman.nowak@citi", "kondzio.bobek@com", "mario.kondino.gov"]
+emails = ["martin.smith@org", "robert.jones@citi", "konrad.bob@com", "mario.condino.gov"]
 
 for email in emails:
     if "@" in email:
