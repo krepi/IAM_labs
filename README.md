@@ -1,173 +1,45 @@
-# 🧭 IAM Foundations in Azure – 3-Month Learning Plan
+# Azure IAM & SecOps Laboratory 🛡️
 
-## 🎯 Cel ogólny
+![Azure](https://img.shields.io/badge/Azure-0089D6?style=for-the-badge&logo=microsoft-azure&logoColor=white) 
+![Entra ID](https://img.shields.io/badge/Entra_ID-00A4EF?style=for-the-badge&logo=microsoft&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) 
+![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=for-the-badge&logo=powershell&logoColor=white) 
+![Microsoft Graph API](https://img.shields.io/badge/Microsoft_Graph_API-0078D4?style=for-the-badge&logo=microsoft&logoColor=white)
 
-W 3 miesiące zbudować solidne podstawy w:
-- **Azure Entra ID (Azure Active Directory)**
-- **Identity and Access Management (IAM)**
-- **PowerShell i automatyzacji**
-- oraz stworzyć **portfolio GitHub z mini-projektami**
+## 📌 About The Project
+Welcome to **IAM Labs**! This repository serves as a practical, code-driven sandbox dedicated to Identity and Access Management (IAM), Cloud Security Operations (SecOps), and Automation within the Microsoft Azure ecosystem.
 
-**Efekt końcowy:**
-- Gotowość do pracy jako *IAM / Cloud / Security Analyst*
-- Przygotowanie pod certyfikat **SC-300**
-- Fundament pod *Python for IAM Automation*
+The primary objective of this repository is to demonstrate how to programmatically manage identities, enforce the Principle of Least Privilege (PoLP), and perform security audits using Python, PowerShell, and the Microsoft Graph API.
 
----
+## 👤 The Author & The Pivot Story
+I am an AML (Anti-Money Laundering) Analyst at a global bank, holding an IT Engineering degree and backed by a 17-year career in the Navy, followed by 4 years as a Logistics Manager.
 
-## 📅 Struktura ogólna
+My operational background in the military ingrained in me a deep functional discipline for security processes, access hierarchy, and strict operational rigor. Currently, in my AML role, I specialize in analyzing risk, tracing financial anomalies, and executing KYC (Know Your Customer) processes. 
 
-| Miesiąc | Faza | Cel główny | Wynik praktyczny |
-|:--|:--|:--|:--|
-| **1** | Fundamenty Azure & PowerShell | Poznanie chmury Azure i PowerShell | Raport użytkowników, pierwszy skrypt |
-| **2** | IAM & Automatyzacja | Zarządzanie użytkownikami, grupami, rolami, MFA | Skrypt IAM + RBAC Report |
-| **3** | Bezpieczeństwo & Portfolio | Conditional Access, dokumentacja, SC-300 | Repo GitHub z projektami IAM |
+I am now actively pivoting my career towards **Cloud Security and Identity & Access Management (IAM)**. I am bridging the gap between assessing corporate risk and technically enforcing cloud security by translating Compliance and AML routines directly into IT Security concepts:
+*   **KYC (Know Your Customer)** ➡️ *Identity Verification & Lifecycle Management*
+*   **Transaction Monitoring** ➡️ *SIEM Audit Logging & Anomaly Detection*
+*   **Risk Assessment** ➡️ *Risk-Based Authentication & Conditional Access*
 
----
+## 🗂️ Project Structure & Labs
 
-## ⚙️ MIESIĄC 1 – Fundamenty Azure i PowerShell  
+*   📁 **`powershell/`**
+    *   *Scripts designed for Microsoft Entra ID administration (e.g., User Provisioning, RBAC audits, and Conditional Access reviews).*
+*   📁 **`python/`**
+    *   *Automation scripts interacting with Microsoft Graph API for complex access reporting and Identity correlation.*
+*   📁 **`plans/`**
+    *   *My strategic development roadmap, learning notes, and project architecture documents.*
 
-**Cel:** poznać środowisko Azure, Entra ID i PowerShell.
+*(Note: Detailed lab artifacts and demonstration codes will populate these directories as I progress through hands-on Azure modules and TryHackMe pathways).*
 
-### 🔹 Tydzień 1 – Start i środowisko  
-- Załóż konto Azure Free + Cloud Shell  
-- Załóż konto GitHub i repozytorium `iam-labs`  
-- Poznaj podstawowe komendy `Get-Az*`, `New-Az*`  
-- **Mini-projekt:** raport użytkowników Azure AD → CSV  
+## 📜 Certifications & Learning Path
+*   ✅ **AZ-900:** Microsoft Azure Fundamentals
+*   ✅ **Background:** IT Engineering Degree | 17 Yrs Navy | 4 Yrs Logistics Manager | Global Banking Compliance
+*   ⏳ **ISC2 CC:** Certified in Cybersecurity *(in progress)*
+*   🎯 **SC-900 & SC-300:** Target Security and Access Administrator tracks
 
-### 🔹 Tydzień 2 – Active Directory / Entra ID Basics  
-- AD vs Azure AD (Entra ID)  
-- Użytkownicy, grupy, role  
-- Tworzenie kont i grup w Azure Portal i PowerShell  
-- **Mini-projekt:** Model użytkowników w IAM  
-
-### 🔹 Tydzień 3 – PowerShell Automation  
-- Zmienne, tablice, hashtable  
-- `foreach`, `if`, `try/catch`  
-- `Import/Export-Csv`, `param()`, `Write-Host`  
-- **Mini-projekt:** User Provisioning z CSV  
-
-### 🔹 Tydzień 4 – IAM Basics w Azure  
-- Role i RBAC: Owner, Contributor, Reader  
-- Przypisywanie ról PowerShellem  
-- MFA i Conditional Access – przegląd  
-- **Mini-projekt:** IAM Report – role i MFA status  
-
-**✅ Efekt po 1. miesiącu:**  
-- Znasz PowerShell i Entra ID  
-- Masz środowisko Azure + repo GitHub  
-- Umiesz tworzyć użytkowników i raporty  
+## 📬 Contact
+*   [🔗 LinkedIn Profile Placeholder](#-link-to-be-added-when-i-am-ready-for-networking)
 
 ---
-
-## ⚙️ MIESIĄC 2 – IAM Automation i RBAC  
-
-**Cel:** automatyzacja zarządzania użytkownikami, grupami i rolami.
-
-### 🔹 Tydzień 5 – IAM Automation  
-- Tworzenie użytkowników i grup PowerShellem  
-- Provisioning i deprovisioning  
-- **Mini-projekt:** Bootstrap IAM Script v1  
-
-### 🔹 Tydzień 6 – RBAC i Role Management  
-- Role w Azure (built-in i custom)  
-- `Get-AzRoleDefinition`, `New-AzRoleAssignment`  
-- Raportowanie ról i uprawnień  
-- **Mini-projekt:** RBAC Report Script  
-
-### 🔹 Tydzień 7 – MFA i Conditional Access  
-- MFA, CA, Sign-in risk policies  
-- PowerShell i Microsoft Graph (podstawy)  
-- **Mini-projekt:** MFA / Conditional Access Report  
-
-### 🔹 Tydzień 8 – Automatyzacja i Workflow  
-- Łączenie provisioning + RBAC + MFA raport  
-- Planowanie skryptów (Azure Automation / Logic App)  
-- **Mini-projekt:** IAM Automation Workflow  
-
-**✅ Efekt po 2. miesiącu:**  
-- Masz praktyczny zestaw skryptów PowerShell  
-- Umiesz przypisywać role automatycznie  
-- Rozumiesz MFA, CA i RBAC  
-
----
-
-## ⚙️ MIESIĄC 3 – Bezpieczeństwo i Portfolio  
-
-**Cel:** połączyć wszystko w pełny projekt i przygotować się do SC-300.
-
-### 🔹 Tydzień 9 – Azure Security Fundamentals  
-- Governance, Compliance, Identity Protection  
-- Microsoft Learn – SC-300 review  
-- Quizy testowe i notatki  
-
-### 🔹 Tydzień 10 – Advanced PowerShell / Graph API  
-- PowerShell Functions, moduły, idempotencja  
-- Wprowadzenie do Graph API  
-- **Mini-projekt:** Graph IAM Report  
-
-### 🔹 Tydzień 11 – Dokumentacja i GitHub Portfolio  
-- README i opis projektów  
-- Diagramy workflow (draw.io / Lucidchart)  
-- Publikacja 2–3 mini-projektów na GitHub  
-
-### 🔹 Tydzień 12 – Powtórka i certyfikacja  
-- Powtórka SC-300 / SC-900  
-- Testy praktyczne IAM  
-- Plan dalszej ścieżki: Python / Security / DevSecOps  
-
-**✅ Efekt po 3. miesiącach:**  
-- Gotowy do pracy w IAM / Cloud Security  
-- Portfolio GitHub z mini-projektami  
-- Przygotowany do SC-300  
-- Fundament pod Python Automation  
-
----
-
-## 🧩 BONUS – „Dev Refresh” (2h tygodniowo)
-
-Cel: utrzymać kontakt z full-stack i DevOps mindsetem.  
-Nie wpływa na plan IAM – traktuj jako rozgrzewkę.
-
-| Tematy | Czas | Cel |
-|:--|:--|:--|
-| OAuth2 / OIDC | 30–60 min | przypomnienie flow logowania |
-| REST API + Postman | 30 min | testowanie zapytań |
-| JWT + tokeny | 30 min | analiza autoryzacji w Azure |
-| Docker Compose | 30 min | lokalne środowisko API |
-| CI/CD basics | 30 min | zrozumienie pipeline’ów DevOps |
-
----
-
-## 📦 MINI-PROJEKTY (Portfolio GitHub)
-
-1. **User Report Script** – eksport użytkowników z Entra ID  
-2. **User Provisioning Script (CSV)** – automatyczne tworzenie kont  
-3. **RBAC Report** – role i uprawnienia w Azure  
-4. **IAM Bootstrap Script** – pełny provisioning + grupy + role  
-5. **MFA Report** – lista kont z MFA i CA status  
-6. **Graph API Report (Python lub PowerShell)** – dane z Microsoft Graph  
-
----
-
-## 🧭 Co dalej (po 3 miesiącach)
-
-Po ukończeniu planu:
-- Rozszerz ścieżkę o **Python for IAM Automation**  
-- Rozważ **Azure Security Engineer (AZ-500)** lub **SC-300**  
-- Kierunki rozwoju:  
-  - IAM Engineer  
-  - Cloud Security Engineer  
-  - DevSecOps / Automation  
-
----
-
-## 🧠 Podsumowanie
-
-**Faza 1:** Azure & PowerShell Fundamentals  
-**Faza 2:** IAM Automation (Entra ID, RBAC, MFA)  
-**Faza 3:** Security & Portfolio  
-
-**Dodatkowo:** 2h tygodniowo Dev Refresh (OAuth2, API, Docker)
-
-  
+*Disclaimer: All code inside this repository strictly adheres to the Least Privilege Principle. Secrets and credentials are never committed directly. Development rules are governed by repository-level instructions.*
