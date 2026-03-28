@@ -20,10 +20,31 @@ dist/
 
 # Security & Secrets
 .env
+.env*
+!.env.example
 *.log
 secrets.json
 .python-hosting-api-key
+*.pem
+*.key
+*.cer
+*.pfx
+*.p12
+*.pub
+
+# Azure Specific
+.azure/
+az_session.json
+local.settings.json
+appsettings.Development.json
+
+# Infrastructure as Code (Terraform)
+.terraform/
+*.tfstate*
+*.tfvars
+*.tfplan
 
 # PowerShell
 .history
+nm_session.json
 "@
