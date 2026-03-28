@@ -22,6 +22,7 @@ Ten plik zawiera instrukcje dla agentów AI (Gemini CLI, Antigravity i innych) p
 3.  **Dokumentacja:** Każdy nowy skrypt powinien zawierać nagłówek z opisem działania i informacją o wymaganych uprawnieniach.
 4.  **Język Kodu (English-First w kodzie):** Agenci AI mają bezwzględny obowiązek pisania wszelkich komentarzy, nazw podprogramów (zmienne, funkcje) czy bloków dokumentacyjnych *wewnątrz kodu* w języku ANGIELSKIM, mimo że konwersacja toczy się w języku polskim.
 5.  **Język Commitów (English-First w Git):** Wiadomości zatwierdzeń (commit messages) muszą być pisane WYŁĄCZNIE w języku angielskim, najlepiej z zastosowaniem konwencji Conventional Commits (np. chore:, feat:, fix:).
+6.  **Dziennik Synchronizacji (SYNC_LOG.md):** Kontekst repozytorium jest współdzielony między stacjami roboczymi (Mac / PC). Na komendę "zapamiętaj sesję", "zapisz dziennik" lub "zrób sync", Agent ma bezwzględny obowiązek zwięźle uzupełnić plik `SYNC_LOG.md` o listę akcji i decyzji z danej sesji (używając aktualnej daty), co ułatwi transfer pamięci projektowej między sesjami.
 
 ---
 *Plik wygenerowany przez Gemini CLI na prośbę użytkownika.*
