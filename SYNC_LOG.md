@@ -15,5 +15,18 @@ Ten plik służy do przekazywania kontekstu między agentami AI pracującymi na 
 6. **Audyt Marki Osobistej:** Przeanalizowano obecny i zaproponowano nowy profil LinkedIn pod kątem wejścia w rynek IAM, zrywając łatkę "Aspirującego Juniora" na rzecz "Eksperta procesowego AML/Ops".
 
 **Następne kroki (Dla agenta na dowolnej maszynie):**
-- Wygenerowanie poświadczeń (App Registration) w portalu Azure Entra ID.
-- Uruchomienie środowiska wirtualnego `python3 -m venv .venv` i test połączenia skryptu `azure_auth_test.py`.
+- Uruchomienie środowiska wirtualnego: `py -m venv .venv` i aktywacja.
+- Instalacja bibliotek: `pip install -r python/requirements.txt`.
+- Logowanie do Azure: `az login` (akcja interaktywna użytkownika).
+- Test uwierzytelniania skryptem `python/azure_auth_test.py`.
+
+---
+
+## [2026-03-29] - PC Environment Setup & Educational Pivot
+
+**Wykonane zadania:**
+1. **Naprawa środowiska Python:** Naprawiono brak modułu `pip` w wersji 3.14 za pomocą `ensurepip`.
+2. **Weryfikacja Azure CLI:** Potwierdzono poprawne działanie `az` po restarcie systemu.
+3. **IAM Study Journal:** Stworzono plik `IAM_STUDY_JOURNAL.md` (English-only) do śledzenia nomenklatury.
+4. **Aktualizacja Zasad (GEMINI.md):** Sformalizowano rolę Agenta jako mentora.
+5. **Bezpieczeństwo (Branch Policy):** Przygotowano synchronizację z gałęzią `main` (świadomy wyjątek).
