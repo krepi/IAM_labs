@@ -30,3 +30,18 @@ Ten plik służy do przekazywania kontekstu między agentami AI pracującymi na 
 3. **IAM Study Journal:** Stworzono plik `IAM_STUDY_JOURNAL.md` (English-only) do śledzenia nomenklatury.
 4. **Aktualizacja Zasad (GEMINI.md):** Sformalizowano rolę Agenta jako mentora.
 5. **Bezpieczeństwo (Branch Policy):** Przygotowano synchronizację z gałęzią `main` (świadomy wyjątek).
+
+---
+
+## [2026-03-30] - PC Session: Implementing Least Privilege (RBAC & SPN)
+
+**Wykonane zadania:**
+1. **Model Uwierzytelniania:** Wyjaśniono różnice między logowaniem interaktywnym (MFA) a nieinteraktywnym (Service Principal).
+2. **Service Principal (SPN):** Utworzono tożsamość `SPN-IAM-LABS-BOT`.
+3. **RBAC Scoping:** Przypisano uprawnienia `Contributor` ograniczone do grupy zasobów `RG-IAM-LABS` (zamiast całej subskrypcji) - wdrożenie zasady **Least Privilege**.
+4. **Automatyzacja:** Skonfigurowano plik `.env` i pomyślnie zweryfikowano uwierzytelnianie skryptem `python/azure_auth_test.py` bez udziału przeglądarki.
+5. **Dziennik Nauki:** Rozbudowano `IAM_STUDY_JOURNAL.md` o pojęcia AuthN vs AuthZ oraz SPN.
+
+**Następne kroki:**
+- Testy operacyjne: Wykonanie pierwszej akcji (np. listowanie zasobów) używając wyłącznie uprawnień SPN.
+- Eksploracja: Sprawdzenie, czy SPN może uzyskać dostęp do zasobów poza grupą `RG-IAM-LABS` (w celu potwierdzenia izolacji).
