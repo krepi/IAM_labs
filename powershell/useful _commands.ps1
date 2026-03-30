@@ -28,6 +28,10 @@ az ad sp create-for-rbac --name "SPN-IAM-LABS-BOT" --role Contributor --scopes "
 # List your Application Registrations
 az ad app list --display-name "SPN-IAM-LABS-BOT" --output table
 
+# Verify Role Assignment (Audit/Ground Truth)
+# Use this to see who has what role in your resource group
+az role assignment list --resource-group RG-IAM-LABS --output table
+
 
 # --- 3. RESOURCE MANAGEMENT ---
 
