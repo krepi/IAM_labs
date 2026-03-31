@@ -48,4 +48,23 @@ az resource list --resource-group RG-IAM-LABS --output table
 py -m pip install -r python/requirements.txt
 
 # Run the authentication test script
-py python/azure_auth_test.py
+# (On Mac use python3, on Windows use py)
+python3 python/azure_auth_test.py
+
+
+# --- 5. LAB AUTOMATION SCRIPTS ---
+
+# List resources in RG-IAM-LABS using the Bot's identity
+python3 python/list_resources.py
+
+# Run the IAM Smoke Test (Isolation & Tagging verification)
+python3 python/smoke_test.py
+
+
+# --- 6. AUDIT & VERIFICATION (CLI) ---
+
+# Check if the tag was correctly applied by the bot
+az resource list --tag Environment=Lab --output table
+
+# View the Audit Trail - see what the bot actually did in the portal
+az monitor activity-log list --resource-group RG-IAM-LABS --output table

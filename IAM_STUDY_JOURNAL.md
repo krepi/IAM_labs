@@ -61,3 +61,25 @@ This study journal is a dedicated log for tracking my professional pivot from AM
 ---
 *Note: Repetition of concepts is encouraged for reinforcement (spaced repetition approach).*
 
+
+### [2026-03-31] Resource Management & Scoping
+1. **Resource Management Client**
+   - **Definition:** A library component (SDK) that allows interacting with Azure Resource Manager (ARM) to perform actions like listing, creating, or deleting resources.
+   - **Why it matters:** It is the primary tool for automating inventory checks and infrastructure auditing.
+   - **AML Analogy:** Like a "Central Asset Registry" – a tool that lets you pull a list of all accounts or assets owned by a specific legal entity.
+
+2. **Resource Group Scoping**
+   - **Definition:** Restricting the permission of a Service Principal (SPN) to a specific container (Resource Group) rather than the whole subscription.
+   - **Why it matters:** Core implementation of the **Least Privilege** principle. If the SPN is compromised, the attacker only gains access to that specific group.
+   - **AML Analogy:** Like an investigator who only has access to files related to a specific "Case Number", instead of the entire bank database.
+
+### [2026-03-31] IAM Verification & Smoke Testing
+1. **Smoke Test (IAM Perspective)**
+   - **Definition:** A rapid initial test to verify if the core security boundaries and operational capabilities are active.
+   - **Why it matters:** It is the first line of defense in confirming that a newly created bot or identity cannot stray outside its playground.
+   - **AML Analogy:** Like a "Test Transaction" – sending a small amount between internal accounts to ensure the filters and limits are correctly set before processing real volume.
+
+2. **Least Privilege Enforcement**
+   - **Definition:** The practical confirmation that an identity is restricted to the minimum set of permissions (scoping) and cannot access unauthorized resources.
+   - **Why it matters:** It prevents "Lateral Movement" in case of a security breach. If the bot is hacked, the rest of the subscription (like `NetworkWatcherRG`) remains safe.
+   - **AML Analogy:** Like a "Firewall" between a bank's Retail and Investment divisions – preventing data leakage between sensitive areas.
