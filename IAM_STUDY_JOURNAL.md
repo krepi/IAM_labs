@@ -83,3 +83,31 @@ This study journal is a dedicated log for tracking my professional pivot from AM
    - **Definition:** The practical confirmation that an identity is restricted to the minimum set of permissions (scoping) and cannot access unauthorized resources.
    - **Why it matters:** It prevents "Lateral Movement" in case of a security breach. If the bot is hacked, the rest of the subscription (like `NetworkWatcherRG`) remains safe.
    - **AML Analogy:** Like a "Firewall" between a bank's Retail and Investment divisions – preventing data leakage between sensitive areas.
+
+### [2026-04-01] Auditing & Visibility: Control Plane vs. Data Plane
+
+1. **Control Plane (Management Plane)**
+   - **Definition:** The layer of Azure responsible for management operations, such as creating, deleting, or modifying resources (e.g., creating a Storage Account).
+   - **Protocol:** Azure Resource Manager (ARM).
+   - **AML Analogy:** Like the **"Authorized Signatory Register"** – verifying who is legally permitted to open a new bank account or update a customer's risk profile.
+
+2. **Data Plane**
+   - **Definition:** The layer responsible for interacting with the actual data *within* a resource (e.g., reading a blob file inside a Storage Account).
+   - **Monitoring:** Requires Diagnostic Settings and a Log Analytics Workspace.
+   - **AML Analogy:** Like **"Transaction Monitoring"** – tracking the actual flow of funds (the data) between accounts to detect suspicious movement, rather than just who opened the account.
+
+
+3. **Log Analytics Workspace (LAW)**
+   - **Definition:** A centralized repository in Azure for collecting, storing, and analyzing telemetry and log data using KQL (Kusto Query Language).
+   - **Why it matters:** It serves as the single source of truth for security forensics and IAM auditing.
+   - **AML Analogy:** The **"Centralized Compliance Data Lake"** – where all global transaction records are stored for multi-year auditing and regulatory reporting (e.g., to FINCEN).
+
+4. **The "Silent 403" (Silent Enumeration)**
+   - **Definition:** Failed "Read/List" operations (GET) are typically NOT logged in the Azure Activity Log to reduce noise.
+   - **Fact:** Failed "Write/Delete/Action" (PUT/DELETE/POST) ARE logged as "Failed" with an "AuthorizationFailed" status.
+   - **IAM Strategy:** To detect reconnaissance (silent enumeration), you need **Log Analytics Workspace** or **Microsoft Sentinel**.
+   
+### [2026-04-01] Lab 1 - Final Reflection
+- **Complexity Management:** As the scripts grow, it is important to pause and map the code blocks back to the business / IAM logic.
+- **The "Big Picture":** Our Python code is simply a **messenger** that carries identity tokens (`AuthN`) and requests actions (`AuthZ`) to the Azure API.
+- **Consolidation Plan:** The next phase will focus on "Reading the Code" rather than writing new modules, ensuring deep comprehension of the `try...except` and `OData filter` constructs.

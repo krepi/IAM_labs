@@ -31,25 +31,21 @@ def main():
         client = ResourceManagementClient(credential, subscription_id)
 
         # --- PHASE 1: TEST ISOLATION (FORBIDDEN) ---
-        print(f"\n[*] PHASE 1: Testing isolation by accessing {forbidden_rg}...")
+        print(f"\n[*] PHASE 1: Testing isolation by LOUDLY accessing {forbidden_rg}...")
         try:
-            # Attempt to list resources in a group where the bot has no permissions
-            forbidden_list = client.resources.list_by_resource_group(forbidden_rg)
-            next(forbidden_list) # Force enumeration
+            # Attempt a "Mutating" action (Update tags on a forbidden group)
+            # This SHOULD be logged as a "Failed" event in Activity Logs.
+            print(f"[*] Attempting to update tags on FORBIDDEN {forbidden_rg}...")
+            client.resource_groups.update(
+                forbidden_rg,
+                {"tags": {"UnauthorizedCodeInjection": "True"}}
+            )
             print("[!] CRITICAL ERROR: Access should have been denied but it wasn't!")
-        except HttpResponseError as e:
-            if "AuthorizationFailed" in str(e) or e.status_code == 403:
-                print(f"[+] SUCCESS: Isolation verified. Access to {forbidden_rg} is DENIED.")
-            else:
-                print(f"[-] Unexpected error: {str(e)}")
-        except StopIteration:
-            # If the list is empty but 200 OK was returned (also might mean some read access)
-            print("[?] Isolation partial: Accessed an empty list in a forbidden group.")
         except Exception as e:
-            if "AuthorizationFailed" in str(e):
-                 print(f"[+] SUCCESS: Isolation verified. Access to {forbidden_rg} is DENIED.")
+            if "AuthorizationFailed" in str(e) or "403" in str(e):
+                print(f"[+] SUCCESS: Isolation verified. LOUD access to {forbidden_rg} is DENIED.")
             else:
-                print(f"[-] Phase 1 unexpected error: {str(e)}")
+                print(f"[-] Phase 1 unexpected failure: {str(e)}")
 
         # --- PHASE 2: TEST OPERATION (ALLOWED - TAGGING) ---
         print(f"\n[*] PHASE 2: Testing operational access (Tagging) in {lab_rg}...")
