@@ -4,6 +4,26 @@ This study journal is a dedicated log for tracking my professional pivot from AM
 
 ---
 
+### [2026-04-02] Cryptography Basics: Symmetric Ciphers
+1. **Symmetric Encryption**
+   - **Definition:** A type of encryption where the same key is used for both encrypting and decrypting the information.
+   - **Example:** Caesar Cipher (Shift Cipher).
+   - **Why it matters:** Foundational concept for understanding how data at rest and in transit is secured in Azure (e.g., BitLocker, TLS).
+   - **AML Analogy:** Like a **"Shared Secret"** or a physical key to a safe that both the bank and the customer possess.
+
+2. **Plaintext vs. Ciphertext**
+   - **Definition:** Plaintext is the original, readable message; Ciphertext is the encrypted, unreadable version.
+   - **Why it matters:** In IAM, sensitive data (like `Client Secret`) should never be stored as plaintext.
+   - **AML Analogy:** A **Clean Bill of Lading** (Plaintext) vs. a **Redacted Transaction Report** (Ciphertext) where sensitive PI is hidden.
+
+3. **The Caesar Cipher (Shift Cipher)**
+   - **Definition:** One of the simplest and most widely known encryption techniques where each letter in the plaintext is replaced by a letter some fixed number of positions down the alphabet.
+   - **Why it matters:** Demonstrates the importance of **Key Management**. If the "shift" (key) is known, the security is compromised.
+   - **AML Analogy:** A simple **substitution code** used in old-school ledger entries to hide client names from casual observers.
+
+
+---
+
 ### [2026-03-29] Foundations: Python & Azure Authentication
 
 1. **Python Virtual Environment (venv)**

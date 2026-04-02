@@ -4,6 +4,16 @@ Ten plik służy do przekazywania kontekstu między agentami AI pracującymi na 
 
 ---
 
+## [2026-04-02] - PC Session: Cryptography Basics (Caesar Cipher)
+**Wykonane zadania:**
+1. **Nauka Podstaw:** Rozpoczęto moduł kryptografii w `python/study/`.
+2. **Implementacja:** Stworzono skrypt `caesar_cipher.py` oraz `art.py` do demonstracji mechanizmu przesunięcia (Shift Cipher).
+3. **Porządki:** Poprawiono rozszerzenie pliku `caesar_cipher.ps` na `.py`.
+4. **Dokumentacja:** Zsynchronizowano dziennik nauki `IAM_STUDY_JOURNAL.md` o pojęcia z zakresu szyfrowania Symetrycznego.
+5. **Git:** Wypchnięto zmiany na gałąź `first_month`.
+
+---
+
 ## [2026-04-01] - PC Session: Lab 1 Completion & Audit Refactoring
 **Wykonane zadania:**
 1. **Środowisko:** Rozwiązano problem z instalacją bibliotek przez `py -m pip`.
