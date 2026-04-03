@@ -4,6 +4,15 @@ Ten plik służy do przekazywania kontekstu między agentami AI pracującymi na 
 
 ---
 
+## [2026-04-03] - PC Session: Password Security & Entropy Analysis
+**Wykonane zadania:**
+1. **Analiza Kodu:** Przegląd skryptu `password_mini_generator.py` pod kątem bezpieczeństwa IAM.
+2. **Edukacja IAM:** Wprowadzono pojęcia CSPRNG vs PRNG oraz pojęcie entropii hasła (Entropy).
+3. **Refaktoryzacja Wiedzy:** Zaktualizowano `IAM_STUDY_JOURNAL.md` o analogie AML dla Brute-force (Structuring/Smurfing).
+4. **Synchronizacja:** Zapisano dziennik sesji przed zakończeniem prac nad generatorem.
+
+---
+
 ## [2026-04-02] - PC Session: Cryptography Basics (Caesar Cipher)
 **Wykonane zadania:**
 1. **Nauka Podstaw:** Rozpoczęto moduł kryptografii w `python/study/`.

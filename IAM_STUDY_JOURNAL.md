@@ -131,4 +131,24 @@ This study journal is a dedicated log for tracking my professional pivot from AM
    - **AML Analogy:** The "Master Registry" of all accounts and transaction limits within a financial institution.
 
 ---
+
+### [2026-04-03] Account Security: Password Generation & Entropy
+
+1. **CSPRNG (Cryptographically Secure Pseudo-Random Number Generator)**
+   - **Definition:** A random number generator with properties that make it suitable for use in cryptography. It is unpredictable even if part of its state is known.
+   - **Python Tool:** The `secrets` module (instead of `random`).
+   - **Why it matters:** In IAM, if tokens or passwords are predictable, the entire authentication system is compromised. 
+   - **AML Analogy:** Like a **"Secure Key Infrastructure"** for bank vaults – you need a process that ensures no two keys are ever the same and cannot be guessed.
+
+2. **Password Entropy**
+   - **Definition:** A measurement of how unpredictable a password is. It depends on the size of the character set and the length of the password.
+   - **Modern Standard:** Length usually trumps complexity. A long passphrase is often harder to crack than a short, complex password.
+   - **AML Analogy:** The difficulty of a **"Money Laundering Scheme"** to be detected – the more "random" and disconnected the steps (high entropy), the harder it is for investigators to reconstruct the path.
+
+3. **Brute-force Attack (IAM Context)**
+   - **Definition:** An attempt to crack a password or username by systematically trying every possible combination.
+   - **Defense:** Throttling, Account Lockout, and MFA.
+   - **AML Analogy:** **"Structuring" (Smurfing)** – an attacker trying many small combinations/transactions to find a gap in the system's defenses without triggering a major alert.
+
+---
 *Note: Repetition of concepts is encouraged for reinforcement (spaced repetition approach).*
