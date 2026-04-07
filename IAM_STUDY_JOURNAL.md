@@ -150,5 +150,26 @@ This study journal is a dedicated log for tracking my professional pivot from AM
    - **Defense:** Throttling, Account Lockout, and MFA.
    - **AML Analogy:** **"Structuring" (Smurfing)** – an attacker trying many small combinations/transactions to find a gap in the system's defenses without triggering a major alert.
 
+
+---
+
+### [2026-04-07] IAM Security: Character Diversity & Password Policies
+
+1. **Character Group Requirements**
+   - **Definition:** A set of rules mandating that a password contains at least one character from various categories (uppercase, lowercase, digits, symbols).
+   - **Why it matters:** Increases the **search space** for brute-force attacks by forcing the use of multiple character sets.
+   - **IAM Analogy:** A **"Multi-Factor Requirement"** for the password itself. Just like MFA requires multiple pieces of evidence, a diverse password requires multiple types of characters to be valid.
+
+2. **Cryptographic Shuffling**
+   - **Definition:** Reordering a set of elements using a secure randomness source (CSPRNG) so that the final position of each element is unpredictable.
+   - **Python Tool:** `secrets.SystemRandom().shuffle()`.
+   - **Why it matters:** Prevents "Pattern Identification". If a password generator always puts the symbol at the end or the digit at the start, it drastically reduces the effective entropy.
+   - **AML Analogy:** **"Layering"** in the laundering process – intentionally mixing and shuffling assets across multiple accounts and jurisdictions to break the audit trail and make the original source impossible to predict from the final destination.
+
+3. **Validation vs. Generation**
+   - **Definition:** Validation checks if an *existing* password meets criteria; Generation creates a password that is *guaranteed* to meet them.
+   - **Shift in Mindset:** Modern IAM systems (like Azure AD/Entra ID) use sophisticated password protection and global ban lists that go beyond simple character requirements.
+   - **AML Analogy:** **"Negative Screening"** (checking against a list of bad actors) vs. **"Safe Guarding"** (only allowing transactions that meet strict, pre-defined safety patterns).
+
 ---
 *Note: Repetition of concepts is encouraged for reinforcement (spaced repetition approach).*

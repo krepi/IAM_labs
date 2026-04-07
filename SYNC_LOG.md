@@ -2,6 +2,18 @@
 
 Ten plik służy do przekazywania kontekstu między agentami AI pracującymi na różnych stacjach roboczych (Mac / Windows) oraz jako log przeciwko prokrastynacji. Po zakończeniu pracy na jednym urządzeniu, agent dopisuje tu podsumowanie, które po zrobieniu `git pull` na drugim urządzeniu od razu da nowemu agentowi pełny kontekst.
 
+
+---
+
+## [2026-04-07] - PC Session: Secure Password Character Diversity
+**Wykonane zadania:**
+1. **Refaktoryzacja Generatora:** Zmodyfikowano `generate_secure_password` w `python/study/password_mini_generator.py`, aby gwarantował obecność co najmniej jednej małej i wielkiej litery, cyfry oraz symbolu.
+2. **Kryptografia:** Wdrożono bezpieczne mieszanie znaków (Cryptographic Shuffle) przy użyciu `secrets.SystemRandom().shuffle()`.
+3. **Modułowość:** Przeniesiono logikę interaktywną starego generatora do bloku `if __name__ == "__main__"`, co umożliwiło importowanie pliku jako modułu.
+4. **Weryfikacja:** Stworzono skrypt `python/study/test_password_generator.py`, który przeprowadził 1000 testów, potwierdzając 100% skuteczność nowej logiki.
+5. **Dokumentacja:** Zaktualizowano `IAM_STUDY_JOURNAL.md` o pojęcia: Character Diversity i Layering (analogia AML dla Shuffling).
+6. **Zarządzanie Zadaniami:** Wykonano plan implementacji i listę zadań.
+
 ---
 
 ## [2026-04-03] - PC Session: Password Security & Entropy Analysis

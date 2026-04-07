@@ -6,29 +6,31 @@ numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
 random_symbol_array =[letters, numbers, symbols]
 
-print("Welcome to the PyPassword Generator!")
-nr_letters = int(input("How many letters would you like in your password?\n"))
-nr_symbols = int(input(f"How many symbols would you like?\n"))
-nr_numbers = int(input(f"How many numbers would you like?\n"))
-symbols_sum= nr_symbols + nr_letters+ nr_numbers
-password = ""
-for i in count():
-    current_array = random.choice(random_symbol_array)
-    if current_array == letters and nr_letters> 0:
-        password += random.choice(letters)
-        nr_letters -= 1
-    elif current_array == symbols and nr_symbols> 0:
-        password += random.choice(symbols)
-        nr_symbols -= 1
-    elif current_array == numbers and nr_numbers> 0:
-        password += random.choice(numbers)
-        nr_numbers -= 1
+if __name__ == "__main__":
+    print("Welcome to the PyPassword Generator!")
+    nr_letters = int(input("How many letters would you like in your password?\n"))
+    nr_symbols = int(input(f"How many symbols would you like?\n"))
+    nr_numbers = int(input(f"How many numbers would you like?\n"))
+    symbols_sum= nr_letters + nr_symbols + nr_numbers
+    
+    password = ""
+    for i in count():
+        current_array = random.choice(random_symbol_array)
+        if current_array == letters and nr_letters> 0:
+            password += random.choice(letters)
+            nr_letters -= 1
+        elif current_array == symbols and nr_symbols> 0:
+            password += random.choice(symbols)
+            nr_symbols -= 1
+        elif current_array == numbers and nr_numbers> 0:
+            password += random.choice(numbers)
+            nr_numbers -= 1
 
-    if len(password) == symbols_sum:
-        break
+        if len(password) == symbols_sum:
+            break
 
-print(f"Your password is: {password}")
-print(len(password))
+    print(f"Your password is: {password}")
+    print(f"Length: {len(password)}")
 # Another way
 # password_list = []
 # for char in range(0, nr_letters):
@@ -57,20 +59,37 @@ import string
 
 def generate_secure_password(length=16):
     """
-    Generates a high-entropy, secure password using industry-standard libraries.
+    Generates a secure password with at least one character from each group:
+    lowercase, uppercase, digits, and symbols.
     """
+    if length < 4:
+        # Enforcing minimum length of 4 to satisfy all categories
+        # Defaulting to 8 for better security if too short
+        length = 8
+    
     # Character sets from the 'string' module
-    letters = string.ascii_letters
+    lowercase = string.ascii_lowercase
+    uppercase = string.ascii_uppercase
     digits = string.digits
-    symbols = string.punctuation # Includes: !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+    symbols = string.punctuation
     
-    all_characters = letters + digits + symbols
+    # Guarantee at least one character from each group
+    password_chars = [
+        secrets.choice(lowercase),
+        secrets.choice(uppercase),
+        secrets.choice(digits),
+        secrets.choice(symbols)
+    ]
     
-    # Use secrets.choice() which is unpredictable (CSPRNG)
-    # list comprehension for efficiency and readability
-    secure_password = ''.join(secrets.choice(all_characters) for _ in range(length))
+    # Fill the remaining length with random choices from all characters
+    all_characters = lowercase + uppercase + digits + symbols
+    password_chars += [secrets.choice(all_characters) for _ in range(length - 4)]
     
-    return secure_password
+    # Use secrets.SystemRandom() for cryptographically secure shuffling
+    # This ensures the guaranteed characters are not always in the same positions
+    secrets.SystemRandom().shuffle(password_chars)
+    
+    return ''.join(password_chars)
 
 # Example usage (commented out to not interfere with your script):
 # print(f"Secure Password: {generate_secure_password()}")
