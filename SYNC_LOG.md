@@ -5,6 +5,14 @@ Ten plik służy do przekazywania kontekstu między agentami AI pracującymi na 
 
 ---
 
+## [2026-04-08] - PC Session: Journal Reorganization & Chronology Policy
+**Wykonane zadania:**
+1. **Reorganizacja Dziennika:** Zmieniono strukturę `IAM_STUDY_JOURNAL.md` na format chronologiczny (najnowsze na górze).
+2. **Polityka Chronologii:** Ustalono nową zasadę dodawania wpisów edukacyjnych pod nagłówkiem głównym.
+3. **Branching:** Kontynuacja pracy na gałęzi `first_month` (zgodnie z życzeniem użytkownika).
+
+---
+
 ## [2026-04-07] - PC Session: Secure Password Character Diversity
 **Wykonane zadania:**
 1. **Refaktoryzacja Generatora:** Zmodyfikowano `generate_secure_password` w `python/study/password_mini_generator.py`, aby gwarantował obecność co najmniej jednej małej i wielkiej litery, cyfry oraz symbolu.
