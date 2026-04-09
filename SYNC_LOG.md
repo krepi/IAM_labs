@@ -5,6 +5,14 @@ Ten plik służy do przekazywania kontekstu między agentami AI pracującymi na 
 
 ---
 
+## [2026-04-09] - Mac Session: Sync & Educational Playground
+**Wykonane zadania:**
+1. **Synchronizacja:** Pobrano zmiany z ostatniego tygodnia (Lab 1 Completion, Cryptography Module).
+2. **Edukacja:** Stworzono plik `python/study/playground.py` demonstrujący użycie klas i logiki warunkowej do generowania adresów e-mail.
+3. **Środowisko:** Zweryfikowano poprawność działania runtime'u Python 3.11 na macOS.
+
+---
+
 ## [2026-04-08] - PC Session: Journal Reorganization & Chronology Policy
 **Wykonane zadania:**
 1. **Reorganizacja Dziennika:** Zmieniono strukturę `IAM_STUDY_JOURNAL.md` na format chronologiczny (najnowsze na górze).
