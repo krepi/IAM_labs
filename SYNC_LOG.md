@@ -5,6 +5,15 @@ Ten plik służy do przekazywania kontekstu między agentami AI pracującymi na 
 
 ---
 
+## [2026-04-11] - Mac Session: Password Validation & Environment Config
+**Wykonane zadania:**
+1. **Rozszerzenie Playground:** Dodano metody `password_creator` oraz `acces_level` do klasy `User` w `python/study/playground.py`.
+2. **Logika Bezpieczeństwa:** Zaimplementowano podstawową walidację długości i zgodności haseł (Basic Password Validation).
+3. **Konfiguracja:** Zaktualizowano `.env.example` o brakującą zmienną `AZURE_SUBSCRIPTION_ID`.
+4. **Dokumentacja:** Uzupełniono `IAM_STUDY_JOURNAL.md` o pojęcia walidacji haseł i logiki dostępu.
+
+---
+
 ## [2026-04-09] - Mac Session: Sync & Educational Playground
 **Wykonane zadania:**
 1. **Synchronizacja:** Pobrano zmiany z ostatniego tygodnia (Lab 1 Completion, Cryptography Module).

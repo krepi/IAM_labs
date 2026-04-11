@@ -4,6 +4,20 @@ This study journal is a dedicated log for tracking my professional pivot from AM
 
 ---
 
+### [2026-04-11] IAM Logic: Password Validation & Role-Based Access
+
+1. **Password Validation (Length & Confirmation)**
+   - **Definition:** A process of checking if a user-supplied password meets minimum security criteria (e.g., length) and matches a confirmation input.
+   - **Why it matters:** Prevents typos during password setting and ensures a baseline level of complexity before the password is even hashed or stored.
+   - **AML Analogy:** **"Customer Identification Program (CIP)"** – ensuring that the data provided (like an ID number) matches the required format and is confirmed across multiple documents before opening an account.
+
+2. **Access Control Logic (Department-Based)**
+   - **Definition:** Determining the level of permission (Admin vs. User) based on specific attributes of the identity (like the `department` attribute).
+   - **Why it matters:** Foundational for **Attribute-Based Access Control (ABAC)**. Automated decisions based on user metadata reduce manual management overhead.
+   - **AML Analogy:** **"Risk Rating"** – assigning a specific level of monitoring or transaction limits based on the customer's "Department" (e.g., industry or geographic location). High-risk departments get "Admin" (Enhanced Due Diligence) level scrutiny.
+
+---
+
 ### [2026-04-08] Identity Protection: MFA & Passwordless Authentication
 
 1. **Multi-Factor Authentication (MFA)**
