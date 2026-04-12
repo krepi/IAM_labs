@@ -17,7 +17,12 @@ This study journal is a dedicated log for tracking my professional pivot from AM
    - **IAM Best Practice:** Use "Write-Only" patterns for secrets. Once a password is set, it should only be compared as a hash, never retrieved or displayed.
    - **AML Analogy:** **"Tipping Off"** – accidentally revealing sensitive investigation details in a public report or to the customer themselves.
 
-3. **CSPRNG vs. PRNG (Security Context)**
+3. **Refactoring Strategy: Separation of Concerns**
+   - **Goal:** Split the `User` class into specialized components (Identity, Authenticator, Authorizer).
+   - **Key Concepts:** Single Responsibility Principle (SRP), Dependency Injection.
+   - **Why it matters:** In large-scale IAM (like Azure Entra), these are separate services. Decoupling them makes the system scalable and easier to audit.
+
+4. **CSPRNG vs. PRNG (Security Context)**
    - **IAM Choice:** Always use `secrets` for passwords, tokens, and session IDs instead of `random`.
    - **AML Analogy:** **"Random Sampling for Audit"** (PRNG) vs. **"Sealed Evidence Bags"** (CSPRNG).
 
