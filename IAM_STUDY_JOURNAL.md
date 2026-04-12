@@ -2,6 +2,27 @@
 
 This study journal is a dedicated log for tracking my professional pivot from AML to IAM. Its primary purpose is to capture, explain, and reinforce technical nomenclature and foundational concepts encountered during my hands-on labs.
 
+
+---
+
+### [2026-04-12] Secure Development: Password Generation & Entropy
+
+1. **CSPRNG vs. PRNG (Security Context)**
+   - **PRNG (`random`):** Deterministic and predictable if the seed is known. Unsafe for cryptographic tasks like password generation.
+   - **CSPRNG (`secrets`):** Uses system-level randomness to ensure outputs are cryptographically secure and non-deterministic.
+   - **IAM Choice:** Always use `secrets` for passwords, tokens, and session IDs.
+   - **AML Analogy:** **"Random Sampling for Audit"** (PRNG) vs. **"Sealed Evidence Bags"** (CSPRNG) – one is for general convenience, the other is for high-stakes security where compromise is not an option.
+
+2. **Password Entropy (Advanced Calculation)**
+   - **Definition:** A measure of the randomness of a password, often expressed in bits ($E = L \times \log_2(R)$, where $L$ is length and $R$ is range of characters).
+   - **Goal:** Aim for >60 bits for common accounts, >80-100 bits for sensitive/admin accounts.
+   - **AML Analogy:** **"Customer Risk Probability"** – the more complex the variables (high entropy), the harder it is for a criminal to "guess" the path of least resistance into the financial system.
+
+3. **Input Sanitization & Validation**
+   - **Definition:** The process of cleaning and verifying user input before processing it in a script.
+   - **Why it matters:** Prevents crashes and potential "Injection" vulnerabilities.
+   - **AML Analogy:** **"Data Quality Checks"** – ensuring that the names and addresses in a KYC form don't contain illegal characters or SQL-like commands that could break the database.
+
 ---
 
 ### [2026-04-11] IAM Logic: Password Validation & Role-Based Access

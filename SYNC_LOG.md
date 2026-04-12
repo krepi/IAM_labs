@@ -3,6 +3,16 @@
 Ten plik służy do przekazywania kontekstu między agentami AI pracującymi na różnych stacjach roboczych (Mac / Windows) oraz jako log przeciwko prokrastynacji. Po zakończeniu pracy na jednym urządzeniu, agent dopisuje tu podsumowanie, które po zrobieniu `git pull` na drugim urządzeniu od razu da nowemu agentowi pełny kontekst.
 
 
+
+---
+
+## [2026-04-12] - Mac Session: Password Generator Review & Sync
+**Wykonane zadania:**
+1. **Przegląd Kodu:** Przeanalizowano `python/study/password_mini_generator.py` pod kątem najlepszych praktyk IAM (CSPRNG, Entropy).
+2. **Edukacja:** Zaktualizowano `IAM_STUDY_JOURNAL.md` o pojęcia Entropii i bezpiecznego zbierania danych wejściowych (Sanitization).
+3. **Synchronizacja:** Zacommitowano zmiany w `playground.py` oraz dziennikach i wypchnięto na GitHub.
+4. **Strategia:** Zaplanowano implementację walidacji wejścia oraz modułu argparse na kolejną sesję.
+
 ---
 
 ## [2026-04-11] - Mac Session: Password Validation & Environment Config
