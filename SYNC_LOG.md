@@ -6,12 +6,12 @@ Ten plik służy do przekazywania kontekstu między agentami AI pracującymi na 
 
 ---
 
-## [2026-04-12] - Mac Session: Password Generator Review & Sync
+## [2026-04-12] - Mac Session: Playground & Access Control Review
 **Wykonane zadania:**
-1. **Przegląd Kodu:** Przeanalizowano `python/study/password_mini_generator.py` pod kątem najlepszych praktyk IAM (CSPRNG, Entropy).
-2. **Edukacja:** Zaktualizowano `IAM_STUDY_JOURNAL.md` o pojęcia Entropii i bezpiecznego zbierania danych wejściowych (Sanitization).
-3. **Synchronizacja:** Zacommitowano zmiany w `playground.py` oraz dziennikach i wypchnięto na GitHub.
-4. **Strategia:** Zaplanowano implementację walidacji wejścia oraz modułu argparse na kolejną sesję.
+1. **Analiza Playground:** Przegląd `python/study/playground.py` pod kątem logiki ABAC i bezpieczeństwa haseł.
+2. **Edukacja IAM:** Zaktualizowano `IAM_STUDY_JOURNAL.md` o pojęcia ABAC oraz ryzyko wycieku danych wrażliwych (Plaintext Leak).
+3. **Synchronizacja:** Finalny commit i push sesji na GitHub.
+4. **Wnioski:** Zidentyfikowano krytyczny błąd bezpieczeństwa (drukujący hasło w konsoli) do poprawy jutro.
 
 ---
 

@@ -5,23 +5,21 @@ This study journal is a dedicated log for tracking my professional pivot from AM
 
 ---
 
-### [2026-04-12] Secure Development: Password Generation & Entropy
+### [2026-04-12] Secure Development: ABAC & Sensitive Data Handling
 
-1. **CSPRNG vs. PRNG (Security Context)**
-   - **PRNG (`random`):** Deterministic and predictable if the seed is known. Unsafe for cryptographic tasks like password generation.
-   - **CSPRNG (`secrets`):** Uses system-level randomness to ensure outputs are cryptographically secure and non-deterministic.
-   - **IAM Choice:** Always use `secrets` for passwords, tokens, and session IDs.
-   - **AML Analogy:** **"Random Sampling for Audit"** (PRNG) vs. **"Sealed Evidence Bags"** (CSPRNG) – one is for general convenience, the other is for high-stakes security where compromise is not an option.
+1. **ABAC (Attribute-Based Access Control)**
+   - **Applied Concept:** In `playground.py`, access levels (Admin/User) and email domains are determined by the `department` attribute.
+   - **Why it matters:** Unlike RBAC (roles), ABAC allows for very granular policies based on user, resource, and environmental attributes.
+   - **AML Analogy:** **"Jurisdictional Risk"** – giving a customer a different risk profile automatically because their `country` attribute is on a sanctioned list.
 
-2. **Password Entropy (Advanced Calculation)**
-   - **Definition:** A measure of the randomness of a password, often expressed in bits ($E = L \times \log_2(R)$, where $L$ is length and $R$ is range of characters).
-   - **Goal:** Aim for >60 bits for common accounts, >80-100 bits for sensitive/admin accounts.
-   - **AML Analogy:** **"Customer Risk Probability"** – the more complex the variables (high entropy), the harder it is for a criminal to "guess" the path of least resistance into the financial system.
+2. **Sensitive Data Exposure (The "Plaintext Leak")**
+   - **Critical Lesson:** Never include passwords or secrets in return strings or logs (like in `access_level()`). 
+   - **IAM Best Practice:** Use "Write-Only" patterns for secrets. Once a password is set, it should only be compared as a hash, never retrieved or displayed.
+   - **AML Analogy:** **"Tipping Off"** – accidentally revealing sensitive investigation details in a public report or to the customer themselves.
 
-3. **Input Sanitization & Validation**
-   - **Definition:** The process of cleaning and verifying user input before processing it in a script.
-   - **Why it matters:** Prevents crashes and potential "Injection" vulnerabilities.
-   - **AML Analogy:** **"Data Quality Checks"** – ensuring that the names and addresses in a KYC form don't contain illegal characters or SQL-like commands that could break the database.
+3. **CSPRNG vs. PRNG (Security Context)**
+   - **IAM Choice:** Always use `secrets` for passwords, tokens, and session IDs instead of `random`.
+   - **AML Analogy:** **"Random Sampling for Audit"** (PRNG) vs. **"Sealed Evidence Bags"** (CSPRNG).
 
 ---
 
