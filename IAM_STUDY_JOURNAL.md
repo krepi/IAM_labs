@@ -3,6 +3,21 @@
 This study journal is a dedicated log for tracking my professional pivot from AML to IAM. Its primary purpose is to capture, explain, and reinforce technical nomenclature and foundational concepts encountered during my hands-on labs.
 
 
+
+---
+
+### [2026-04-13] Security Remediation: Fixing Data Leaks & Controlled Loops
+
+1. **Security Remediation (Data Leakage)**
+   - **Action:** Removed password return from the `access_level()` method.
+   - **Why it matters:** Even in development, printing passwords to the console or returning them in user-facing strings is a major "Finding" in security audits. It violates the principle of **Need-to-Know**.
+   - **AML Analogy:** Like a bank agent accidentally printing a customer's full SSN on a public-facing receipt instead of just the last 4 digits.
+
+2. **Loop Control vs. Recursion**
+   - **Action:** Switched `password_creator()` from recursion to a `while True` loop.
+   - **Why it matters:** Recursion can lead to a `RecursionError` if not handled carefully. In security, **Predictable Termination** is important. A loop is more idiomatic for retry logic in Python.
+   - **AML Analogy:** A repetitive manual check that continues until the "clean" state is reached, rather than a chain of referrals that could get lost in the hierarchy (stack overflow).
+
 ---
 
 ### [2026-04-12] Secure Development: ABAC & Sensitive Data Handling

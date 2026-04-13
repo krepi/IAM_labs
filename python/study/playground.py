@@ -40,24 +40,23 @@ class User:
         return isValid
     
     def password_creator(self):
-        password = input("Enter your password: ")
-        confirmed_password = input("Confirm your password: ")
-        if password == confirmed_password:
-            if len(password) < 8:
-                print("Password is too short")
-                return self.password_creator()
-            elif(self.password_checker(password)== False):
-                print("Password has no specific digits")
-                return self.password_creator()
+        while True:
+            password = input("Enter your password: ")
+            confirmed_password = input("Confirm your password: ")
+            if password == confirmed_password:
+                if len(password) < 8:
+                    print("Password is too short")
+                elif not self.password_checker(password):
+                    print("Password has no specific digits")
+                else:
+                    return password
             else:
-                return password
-        else:
-            print("Passwords do not match")
-            return self.password_creator()
+                print("Passwords do not match")
 
     def access_level(self):
         if self.department == "IT":
-            return f"Access Granted for {self.get_usermail()} as Admin and now create your password{self.password_creator()}"
+            self.password_creator()
+            return f"Access Granted for {self.get_usermail()} as Admin. Password set successfully."
         else:
             return f"Access Granted for {self.get_usermail()} as User"
 

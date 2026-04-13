@@ -4,14 +4,27 @@ Ten plik służy do przekazywania kontekstu między agentami AI pracującymi na 
 
 
 
+
+---
+
+## [2026-04-13] - Mac Session: Refactoring & Security Patch
+**Wykonane zadania:**
+1. **Refaktoryzacja Playground:** Zastąpiono rekurencję w `password_creator` pętlą `while True`. 
+2. **Poprawka Bezpieczeństwa:** Usunięto zwracanie hasła w tekście jawnym (plaintext) w metodzie `access_level`.
+3. **Edukacja IAM:** Dodano do `IAM_STUDY_JOURNAL.md` pojęcia: Security Remediation oraz Loop Control.
+4. **Synchronizacja:** Zapisano zmiany i przygotowano do pusha na GitHub.
+
 ---
 
 ## [2026-04-12] - Mac Session: Playground & Access Control Review
 **Wykonane zadania:**
 1. **Analiza Playground:** Przegląd `python/study/playground.py` pod kątem logiki ABAC i bezpieczeństwa haseł.
-2. **Edukacja IAM:** Zaktualizowano `IAM_STUDY_JOURNAL.md` o pojęcia ABAC oraz ryzyko wycieku danych wrażliwych (Plaintext Leak).
+2. **Edukacja IAM:** Zaktualizowano `IAM_STUDY_JOURNAL.md` o pojęcia ABAC, SRP (Single Responsibility) oraz ryzyko wycieku danych (Plaintext Leak).
 3. **Synchronizacja:** Finalny commit i push sesji na GitHub.
-4. **Wnioski:** Zidentyfikowano krytyczny błąd bezpieczeństwa (drukujący hasło w konsoli) do poprawy jutro.
+4. **Plan na jutro/pojutrze:**
+   - Przejście z rekurencji na pętlę `while` w `password_creator`.
+   - Usunięcie wyświetlania hasła w `access_level`.
+   - Refaktoryzacja i podział klasy (poczytanie o SRP i dekompozycji w Pythonie).
 
 ---
 
