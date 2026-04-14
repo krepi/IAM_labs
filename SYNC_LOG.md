@@ -5,6 +5,17 @@ Ten plik służy do przekazywania kontekstu między agentami AI pracującymi na 
 
 
 
+
+---
+
+## [2026-04-14] - Mac Session: Class Decomposition & DI
+**Wykonane zadania:**
+1. **Dekompozycja Klas:** Wydzielono klasę `Authenticator` z `User`, realizując zasadę SRP (Single Responsibility Principle).
+2. **Dependency Injection:** Zastosowano wstrzykiwanie zależności (Method Injection) w metodzie `access_level`.
+3. **Optymalizacja:** Usunięto zbędne powiązania między klasami (Decoupling).
+4. **Edukacja:** Zaktualizowano `IAM_STUDY_JOURNAL.md` o pojęcia Decoupling i Dependency Injection.
+5. **Synchronizacja:** Zapisano zmiany i przygotowano do wypchnięcia na GitHub.
+
 ---
 
 ## [2026-04-13] - Mac Session: Refactoring & Security Patch

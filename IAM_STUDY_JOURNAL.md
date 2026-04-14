@@ -4,6 +4,21 @@ This study journal is a dedicated log for tracking my professional pivot from AM
 
 
 
+
+---
+
+### [2026-04-14] Architecture: Decoupling & Dependency Injection
+
+1. **Decoupling (Unused Dependencies)**
+   - **Action:** Removed the `user` dependency from the `Authenticator` class.
+   - **Why it matters:** In security architecture, keeping components "loosely coupled" reduces the attack surface and makes the system easier to maintain. If a component doesn't need an object to perform its job, it shouldn't have access to it.
+   - **AML Analogy:** An investigator only needs the "Transaction ID" to verify a payment, not the customer's entire personal history and family tree (Data Minimization).
+
+2. **Dependency Injection (Method Injection)**
+   - **Action:** Passed the `authenticator` instance into the `access_level()` method.
+   - **Why it matters:** This allows the `User` class to remain independent of the *how* authentication happens. We can swap the basic `Authenticator` for an `MFA_Authenticator` without changing the `User` class.
+   - **AML Analogy:** A "Due Diligence Module" that can be plugged into any "New Account" flow regardless of whether it's for a person or a company.
+
 ---
 
 ### [2026-04-13] Security Remediation: Fixing Data Leaks & Controlled Loops

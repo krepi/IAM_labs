@@ -15,6 +15,18 @@ class User:
 
  
     
+
+    def access_level(self, authenticator):
+        if self.department == "IT":
+            authenticator.password_creator()
+            return f"Access Granted for {self.get_usermail()} as Admin. Password set successfully."
+        else:
+            return f"Access Granted for {self.get_usermail()} as User"
+
+class Authenticator:
+    # Removed unused __init__ to decouple from User
+
+
     def password_checker(self,password):
         lowercase = string.ascii_lowercase
         uppercase = string.ascii_uppercase
@@ -53,15 +65,10 @@ class User:
             else:
                 print("Passwords do not match")
 
-    def access_level(self):
-        if self.department == "IT":
-            self.password_creator()
-            return f"Access Granted for {self.get_usermail()} as Admin. Password set successfully."
-        else:
-            return f"Access Granted for {self.get_usermail()} as User"
 
 
 new_user = User(name, surname, department)
+new_authenticator = Authenticator()
 print(new_user.get_usermail())
-print(new_user.access_level())
+print(new_user.access_level(new_authenticator))
 
