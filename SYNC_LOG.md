@@ -175,3 +175,10 @@ Ten plik służy do przekazywania kontekstu między agentami AI pracującymi na 
 1. **Strategia Pivotu:** Opracowano dokument `plans/IAM_pivot_strategy.md`.
 2. **Security-First:** Utworzono `.env.example` i zabezpieczono `.gitignore`.
 3. **Zasady Współpracy:** Stworzono `GEMINI.md`.
+
+### 2026-04-19
+- Discussion on automation of daily GitHub activity reminders.
+- Explored options: GitHub Actions (recommended), n8n, and local scripts.
+- Key IAM concepts discussed: Secrets Management (GitHub Secrets), Service Accounts, M2M Authentication, and limiting the Blast Radius by using isolated accounts.
+- Updated IAM_STUDY_JOURNAL.md with new terminology.
+- Project status: Theory on automation completed, ready to continue with playground.py or practical implementation if requested.

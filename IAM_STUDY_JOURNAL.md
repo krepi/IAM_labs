@@ -276,3 +276,8 @@ This study journal is a dedicated log for tracking my professional pivot from AM
 
 ---
 *Note: Repetition of concepts is encouraged for reinforcement (spaced repetition approach).*
+
+- Secrets Management: Secure storage and handling of sensitive information (APIs, tokens, passwords) in automation.
+- Service Account: A special type of account intended to represent a non-human user that needs to authenticate and be authorized to access resources.
+- Machine-to-Machine (M2M) Authentication: The process by which two automated systems authenticate with each other without human intervention.
+- Blast Radius: The impact that a security incident can have on an organization. Limiting the blast radius is a key strategy in IAM to ensure that a compromise of one part of the system does not lead to total collapse.
