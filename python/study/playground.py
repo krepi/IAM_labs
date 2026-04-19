@@ -1,74 +1,87 @@
 import string
+import re
+
+# Collect user information
 name = input("What is your name? ")
 surname = input("What is your surname? ")
 department = input("What is your department? ")
 
 class User:
+    """
+    Represents a system identity.
+    Handles identity attributes and basic authorization logic (Attribute-Based Access Control - ABAC).
+    """
     def __init__(self, name, surname, department):
         self.name = name
         self.surname = surname
         self.department = department
 
     def get_usermail(self):
+        """Generates a company email based on the department attribute."""
         domain = "it.com" if self.department == "IT" else "company.com"
         return f"{self.name}.{self.surname}@{domain}".lower()
 
- 
-    
-
     def access_level(self, authenticator):
+        """
+        Determines access level based on identity attributes (ABAC).
+        Admin access for IT department triggers a password setup flow.
+        """
         if self.department == "IT":
+            # Direct the user to the authenticator for security setup
             authenticator.password_creator()
-            return f"Access Granted for {self.get_usermail()} as Admin. Password set successfully."
+            return f"Access Granted for {self.get_usermail()} as Admin. Security profile initialized."
         else:
             return f"Access Granted for {self.get_usermail()} as User"
 
 class Authenticator:
-    # Removed unused __init__ to decouple from User
-
-
-    def password_checker(self,password):
-        lowercase = string.ascii_lowercase
-        uppercase = string.ascii_uppercase
-        digits = string.digits
-        symbols = string.punctuation
-        isValid = False
-        hasUpper = any(char in uppercase for char in password)
-        hasLower = any(char in lowercase for char in password)
-        hasNumber = any(char in digits for char in password)
-        hasSymbol = any(char in symbols for char in password)
-        
-        
-        if not hasUpper: print("-> Missing uppercase letter")
-        if not hasLower: print("-> Missing lowercase letter")
-        if not hasNumber: print("-> Missing digit")
-        if not hasSymbol: print("-> Missing symbol")
-        
-        isValid = all([hasUpper,hasLower,hasSymbol,hasNumber])
-        return isValid
-        
-        
-        
-        return isValid
+    """
+    Handles security validation and authentication mechanisms.
+    Separated from User class to follow the Single Responsibility Principle (SRP).
+    """
     
+    def _validate_password(self, password):
+        """
+        Validates password complexity using Regular Expressions.
+        Checks for: 8+ chars, uppercase, lowercase, digit, and special character.
+        """
+        if len(password) < 8:
+            print("-> Security Alert: Password is too short (min. 8 characters)")
+            return False
+            
+        # Regex to check all complexity requirements in one pass
+        # (?=.*[A-Z]) -> Uppercase check
+        # (?=.*[a-z]) -> Lowercase check
+        # (?=.*\d)    -> Digit check
+        # (?=.*[#!$%&()*+]) -> Symbol check
+        pattern = r"^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!#\$%&()*+]).+$"
+        
+        if not re.match(pattern, password):
+            print("-> Security Alert: Password must contain uppercase, lowercase, digit, and special symbol.")
+            return False
+        
+        return True
+
     def password_creator(self):
+        """Interactive loop to set and verify a new password."""
         while True:
-            password = input("Enter your password: ")
+            # Note: In production, use 'getpass' module to hide input
+            password = input("Enter your new secure password: ")
             confirmed_password = input("Confirm your password: ")
-            if password == confirmed_password:
-                if len(password) < 8:
-                    print("Password is too short")
-                elif not self.password_checker(password):
-                    print("Password has no specific digits")
-                else:
-                    return password
-            else:
-                print("Passwords do not match")
+            
+            if password != confirmed_password:
+                print("-> Error: Passwords do not match. Please try again.")
+                continue
+                
+            if self._validate_password(password):
+                print("-> Success: Password meets complexity standards.")
+                return password
 
-
-
+# Bootstrap the identity and security modules
 new_user = User(name, surname, department)
 new_authenticator = Authenticator()
-print(new_user.get_usermail())
-print(new_user.access_level(new_authenticator))
 
+# Demonstrate identity and access flow
+print("-" * 30)
+print(f"Identity Verified: {new_user.get_usermail()}")
+print(new_user.access_level(new_authenticator))
+print("-" * 30)

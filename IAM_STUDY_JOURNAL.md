@@ -5,6 +5,21 @@ This study journal is a dedicated log for tracking my professional pivot from AM
 
 
 
+
+---
+
+### [2026-04-19] Security Standards: Regex Validation & Documentation
+
+1. **Regular Expressions (Regex) in IAM**
+   - **Action:** Implemented a complex regex pattern to enforce password requirements in a single pass.
+   - **Why it matters:** Regex provides a standardized, industry-wide way to define complex validation rules. In IAM, this ensures that password policies are applied consistently and are easier to update without changing the logic flow.
+   - **AML Analogy:** **"Pattern Matching"** in transaction monitoring – using specific algorithms to detect "Smurfing" or "Layering" by identifying specific sequences of behavior across multiple accounts.
+
+2. **Professional Documentation & SRP**
+   - **Action:** Added English Docstrings and finalized class separation.
+   - **Why it matters:** Clear documentation and Single Responsibility Principle (SRP) are critical for auditing security code. If an auditor can't understand what a piece of code does, they can't verify its security.
+   - **AML Analogy:** **"Audit Trail Clarity"** – ensuring that every decision made during a KYC review is well-documented and mapped to a specific regulatory requirement.
+
 ---
 
 ### [2026-04-14] Architecture: Decoupling & Dependency Injection
