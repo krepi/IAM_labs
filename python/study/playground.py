@@ -1,3 +1,4 @@
+from importlib.machinery import all_suffixes
 import string
 import re
 
@@ -5,6 +6,7 @@ import re
 name = input("What is your name? ")
 surname = input("What is your surname? ")
 department = input("What is your department? ")
+mocked_existing_db = ["JKOW00001", "ANOW00001", "JKOW00002", "MMSZ00001"]
 
 class User:
     """
@@ -32,6 +34,20 @@ class User:
             return f"Access Granted for {self.get_usermail()} as Admin. Security profile initialized."
         else:
             return f"Access Granted for {self.get_usermail()} as User"
+    
+    def generate_id(self, db):
+        prefix = f"{self.name[0]}{self.surname[0:3]}".lower()
+        highest_suffix = 0
+
+        for id in db:            
+            if id[:4].lower() == prefix:
+                current_suffix = int(id[4:])
+                if current_suffix > highest_suffix:
+                    highest_suffix = current_suffix
+        suffix = f"{highest_suffix+1}".zfill(4)
+           
+        
+        return f"{prefix}{suffix}"  
 
 class Authenticator:
     """
@@ -85,3 +101,4 @@ print("-" * 30)
 print(f"Identity Verified: {new_user.get_usermail()}")
 print(new_user.access_level(new_authenticator))
 print("-" * 30)
+print(new_user.generate_id(mocked_existing_db))

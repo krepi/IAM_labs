@@ -8,6 +8,20 @@ This study journal is a dedicated log for tracking my professional pivot from AM
 
 ---
 
+### [2026-04-20] Lifecycle Management: Identity Provisioning & Collision Handling
+
+1. **Identity Provisioning (Unique IDs)**
+   - **Action:** Implemented a `generate_id` logic that creates account names using name/surname initials and a numeric suffix.
+   - **Why it matters:** In large organizations, automated ID generation is essential to avoid manual errors and ensure that every user has a unique identifier (like `sAMAccountName` in AD).
+   - **AML Analogy:** **"Unique Entity Identification"** – assigning a unique internal ID to a customer to ensure their activities across different branches are linked to the same person, even if they have a common name.
+
+2. **Collision Handling (Incremental Suffixes)**
+   - **Action:** Added a loop that scans existing IDs to find the `highest_suffix` and increments it by 1.
+   - **Why it matters:** Prevents "Account Overlap" where two users (e.g., two "Jan Kowalski") would be assigned the same login. Finding the "Next Available" ID is a core requirement for automated workflow systems.
+   - **AML Analogy:** **"Deduplication"** – checking if a new client is actually an existing customer trying to open multiple accounts under slightly different aliases (e.g., "Jan" vs "Janusz").
+
+---
+
 ### [2026-04-19] Security Standards: Regex Validation & Documentation
 
 1. **Regular Expressions (Regex) in IAM**
