@@ -288,6 +288,13 @@ This study journal is a dedicated log for tracking my professional pivot from AM
    - **Why it matters:** It is the central database where you define roles (RBAC), users, and access policies.
    - **AML Analogy:** The "Master Registry" of all accounts and transaction limits within a financial institution.
 
+### [2026-04-22] Data Normalization & Formatting in Identity
+
+1. **Identity Data Normalization**
+   - **Action:** Refactored `generate_id` to enforce uppercase IDs, pad surnames with 'X' to 3 characters (`.ljust(3, 'X')`), and standardize the numeric suffix to 5 digits (`.zfill(5)`).
+   - **Why it matters:** IAM systems (like AD/Entra) require strict data conventions. Normalizing data prevents sync errors and formatting mismatches downstream.
+   - **AML Analogy:** **"Data Cleansing"** – Ensuring names and addresses are formatted identically before running them through a screening engine to prevent false negatives.
+
 ---
 *Note: Repetition of concepts is encouraged for reinforcement (spaced repetition approach).*
 

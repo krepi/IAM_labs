@@ -11,6 +11,15 @@ Ten plik służy do przekazywania kontekstu między agentami AI pracującymi na 
 
 ---
 
+## [2026-04-22] - Mac Session: Identity Manager Refactoring & Lab Creation
+**Wykonane zadania:**
+1. **Refaktoryzacja Tożsamości:** Poprawiono logikę `generate_id` (wielkie litery, dopełnianie znakami 'X', standardowy format `.zfill(5)`).
+2. **Architektura Laboratoriów:** Dotychczasowy kod z brudnopisu przekształcono w samodzielny moduł: `python/labs/lab01_identity_provisioning/identity_manager.py`.
+3. **Dokumentacja IAM:** Uzupełniono `IAM_STUDY_JOURNAL.md` o wpis dotyczący Data Normalization i Data Cleansing.
+4. **Czysty Start:** Przygotowano od nowa bezpieczny i pusty plik `python/study/playground.py` pod kolejne testy.
+
+---
+
 ## [2026-04-20] - PC Session: ID Generation & Repository Push
 **Wykonane zadania:**
 1. **Synchronizacja Git:** Wykonano `git pull` na gałęzi `first_month`.
