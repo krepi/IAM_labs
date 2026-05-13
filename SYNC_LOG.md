@@ -11,11 +11,15 @@ Ten plik służy do przekazywania kontekstu między agentami AI pracującymi na 
 
 ---
 
-## [2026-05-13] - Mac Session: Networking Labs Initialization
+## [2026-05-13] - Mac Session: Structure Reorganization & Networking Initialization
 **Wykonane zadania:**
-1. **Struktura Labów:** Utworzono nowy katalog `labs/networking/` na potrzeby zadań związanych z architekturą sieciową.
-2. **Inicjalizacja Lab 01:** Stworzono podkatalog `lab01_azure_network_security` oraz plik `README.md` z opisem celu, planowanej architektury (VNet, Jump Box, Backend) i statusem prac w języku angielskim.
-3. **Synchronizacja:** Zaktualizowano log i wypchnięto zmiany na GitHub.
+1. **Reorganizacja struktury:** Przeprowadzono gruntowne porządki w repozytorium dla lepszej spójności:
+   - Skonsolidowano wszystkie laby w folderze `labs/` z podziałem na domeny (`azure-platform`, `identity`, `networking`).
+   - Przeniesiono materiały do nauki i brudnopisy do folderu `study/` (podział na `python` i `powershell`).
+   - Przeniesiono dokumentację planistyczną do `docs/plans/`.
+   - Ujednolicono nazewnictwo folderów na format `labXX-nazwa`.
+2. **Inicjalizacja Labu Sieciowego:** Stworzono `labs/networking/lab01-network-security` z dokumentacją README.
+3. **Synchronizacja:** Zaktualizowano log i wypchnięto zreorganizowaną strukturę na GitHub.
 
 ---
 
