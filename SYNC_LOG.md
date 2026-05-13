@@ -11,6 +11,14 @@ Ten plik służy do przekazywania kontekstu między agentami AI pracującymi na 
 
 ---
 
+## [2026-05-13] - Mac Session: Networking Labs Initialization
+**Wykonane zadania:**
+1. **Struktura Labów:** Utworzono nowy katalog `labs/networking/` na potrzeby zadań związanych z architekturą sieciową.
+2. **Inicjalizacja Lab 01:** Stworzono podkatalog `lab01_azure_network_security` oraz plik `README.md` z opisem celu, planowanej architektury (VNet, Jump Box, Backend) i statusem prac w języku angielskim.
+3. **Synchronizacja:** Zaktualizowano log i wypchnięto zmiany na GitHub.
+
+---
+
 ## [2026-05-08] - Session Resume: Return after parental leave
 **Wykonane zadania:**
 1. **Wznowienie prac:** Powrót do projektu po przerwie związanej z narodzinami dziecka. Rozpoznanie aktualnego stanu repozytorium.
