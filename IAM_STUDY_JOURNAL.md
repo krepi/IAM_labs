@@ -8,6 +8,30 @@ This study journal is a dedicated log for tracking my professional pivot from AM
 
 ---
 
+### [2026-05-13] Infrastructure Security: Network Isolation & Defense in Depth
+
+1. **Network Isolation (Micro-segmentation)**
+   - **Context:** New networking lab initialized (`labs/networking/lab01-network-security`).
+   - **Why it matters:** In IAM, identity is the "new perimeter," but network isolation remains a critical secondary control. Even an authenticated identity should be restricted from reaching sensitive assets if they are not within the authorized network segment (Zero Trust principle).
+   - **AML Analogy:** **"Physical Vault Isolation"** – even if you have the key (Identity), you must be physically present in the specific secure zone (Network) of the bank to open the vault. Having the key doesn't allow you to open it from the street.
+
+2. **Defense in Depth (Layered Security)**
+   - **Concept:** A security strategy that employs multiple layers of defense to protect assets. If one layer (like IAM/RBAC) fails, others (like Network Security Groups or Encryption) are still in place.
+   - **Why it matters:** Relying on a single control is a "Single Point of Failure." Layering IAM policies with network boundaries significantly reduces the **Blast Radius**.
+   - **AML Analogy:** **"Multi-Layered Fraud Detection"** – combining KYC at account opening, transaction limits at the point of execution, and behavioral monitoring during the session. Each layer catches what others might miss.
+
+3. **Access Control Lists (ACLs) - File System Security**
+   - **Action:** Used `icacls` to restrict `.pem` file permissions. 
+   - **Why it matters:** IAM is not just about the cloud; it starts at your local machine. If your private key (your Identity) is readable by everyone on your PC, it's not a secret anymore. Windows ACLs allow for granular "Read-Only" locks.
+   - **AML Analogy:** **"Dual Key Custody"** – a rule where only specific employees can physically hold the keys to the sensitive document storage.
+
+4. **Bastion Host / Jumpbox (Choke Point)**
+   - **Action:** Created a VM to act as a secure gateway (`vm-jumpbox`).
+   - **Why it matters:** Instead of exposing every server to the internet, you use a "Jumpbox." This creates a single, highly audited entry point. It's much easier to monitor one gateway than 100 individual servers.
+   - **AML Analogy:** **"High-Value Transaction Clearing"** – instead of letting any branch process a $1M transfer, all such transactions must pass through one specialized, high-security regional hub.
+
+---
+
 ### [2026-04-20] Lifecycle Management: Identity Provisioning & Collision Handling
 
 1. **Identity Provisioning (Unique IDs)**

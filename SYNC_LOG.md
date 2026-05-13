@@ -11,6 +11,21 @@ Ten plik służy do przekazywania kontekstu między agentami AI pracującymi na 
 
 ---
 
+## [2026-05-13] - PC Session: Repository Sync & Cloud Hygiene
+**Wykonane zadania:**
+1. **Synchronizacja Git:** Wykonano `git pull` na gałęzi `first_month`.
+2. **Optymalizacja SSH:** Skonfigurowano plik `$HOME\.ssh\config` dla wygodnego dostępu.
+3. **Cloud Hygiene (Total Reset):** Usunięto wszystkie zasoby w grupie `RG-IAM-LABS` (VM, VNet, Dyski, IP, Klucze), aby przygotować grunt pod czysty lab jutro.
+4. **Weryfikacja .gitignore:** Potwierdzono poprawne ignorowanie plików `.pem`.
+5. **SYNC_LOG:** Zaktualizowano dziennik na stacji Windows.
+
+**Plany na następną sesję:**
+- Re-deployment infrastruktury sieciowej z poprawnym nazewnictwem (np. `vnet-iam-labs`).
+- Konfiguracja nowej maszyny w nowej, czystej sieci.
+
+
+---
+
 ## [2026-05-13] - Mac Session: Structure Reorganization & Networking Initialization
 **Wykonane zadania:**
 1. **Reorganizacja struktury:** Przeprowadzono gruntowne porządki w repozytorium dla lepszej spójności:
@@ -218,5 +233,7 @@ Ten plik służy do przekazywania kontekstu między agentami AI pracującymi na 
 - Discussion on automation of daily GitHub activity reminders.
 - Explored options: GitHub Actions (recommended), n8n, and local scripts.
 - Key IAM concepts discussed: Secrets Management (GitHub Secrets), Service Accounts, M2M Authentication, and limiting the Blast Radius by using isolated accounts.
-- Updated IAM_STUDY_JOURNAL.md with new terminology.
-- Project status: Theory on automation completed, ready to continue with playground.py or practical implementation if requested.
+- Updated IAM_STUDY_JOURNAL.md with- [x] Network topology planning.
+- [ ] Azure Virtual Network (VNet) configuration.
+- [ ] Virtual Machine deployment (Ubuntu Server).
+- [ ] Secure SSH access configuration (Identity Keys).
