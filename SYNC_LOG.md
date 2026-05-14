@@ -12,13 +12,15 @@ Ten plik służy do przekazywania kontekstu między agentami AI pracującymi na 
 
 ---
 
-## [2026-05-14] - PC Session: Repository Sync & Environment Alignment
+## [2026-05-14] - PC Session: Portal Walkthrough & Lab Hygiene
 **Wykonane zadania:**
-1. **Synchronizacja Git:** Wykonano `git pull` na gałęzi `first_month`.
-2. **Aktualizacja Kontekstu:** Pomyślnie pobrano zmiany z sesji Mac (reorganizacja dokumentacji, plany na audyt IAM).
-3. **Weryfikacja:** Repozytorium na stacji Windows jest teraz w pełni zsynchronizowane ze stanem zdalnym.
+1. **Synchronizacja Git:** Wykonano `git pull` i zaktualizowano lokalne repozytorium.
+2. **Lab 01 (Manual):** Pomyślnie przeprowadzono manualny deployment infrastruktury przez Azure Portal (VNet, Subnets, NSG, VM).
+3. **Dokumentacja:** Stworzono `MANUAL_PORTAL.md` z analizą architektury i bezpieczeństwa (Zero Trust, Least Privilege).
+4. **Cloud Hygiene:** Całkowicie wyczyszczono grupę zasobów `rg-iam-labs` po zakończeniu sesji, przygotowując grunt pod jutrzejszą automatyzację.
+5. **Edukacja:** Zaktualizowano `IAM_STUDY_JOURNAL.md` o 4 nowe pojęcia z zakresu sieci i bezpieczeństwa.
 
-**Status:** Ready to continue with Azure CLI scripts.
+**Status:** Lab 01 foundation understood. Ready for CLI automation tomorrow.
 
 ---
 

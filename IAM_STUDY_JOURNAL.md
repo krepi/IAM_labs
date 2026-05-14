@@ -25,6 +25,26 @@ This study journal is a dedicated log for tracking my professional pivot from AM
    - **Why it matters:** Prevents "Privilege Escalation". It ensures that a delegated admin cannot accidentally (or intentionally) grant someone higher permissions than they should have.
    - **AML Analogy:** **"Threshold-Based Approval"** – a junior investigator can approve transactions, but ONLY if they are below $5,000 and the customer is from a "Low Risk" category.
 
+4. **VNet Segmentation (Isolation)**
+   - **Definition:** Dividing a larger network (`10.0.0.0/16`) into smaller, isolated subnets (`snet-public`, `snet-private`).
+   - **Why it matters:** It prevents "Lateral Movement". Even if one subnet is compromised, the attacker is blocked from reaching others by default.
+   - **AML Analogy:** **"Physical Vault Separation"** – separate rooms for cash, jewelry, and documents. Access to the lobby doesn't give you access to the vault.
+
+5. **NSG Rules & Priorities (Policy Enforcement)**
+   - **Concept:** Rules are processed from lowest to highest priority number (e.g., 100 before 65000).
+   - **Why it matters:** Allows for granular overrides. We can "Allow SSH" (Priority 100) while still having a "Deny All" (Priority 65500) safety net.
+   - **AML Analogy:** **"Whitelist vs. Blacklist"** – a general ban on certain jurisdictions, with specific "Approved Partner" exceptions that take precedence.
+
+6. **Zero Trust (Default Deny)**
+   - **Definition:** A security model that assumes every request is a potential threat. Nothing is trusted by default, even if it's already "inside" the network.
+   - **Applied Action:** Using the `DenyAllInBound` default rule and disabling "Default Outbound Access" on subnets.
+   - **AML Analogy:** **"Enhanced Due Diligence (EDD)"** – treating every high-value transaction as suspicious until proven otherwise, rather than trusting a client just because they've been with the bank for years.
+
+7. **Cloud Hygiene (Resource Lifecycle)**
+   - **Action:** Enabling "Delete Public IP/NIC with VM" and performing a full cleanup after the lab.
+   - **Why it matters:** Prevents "Resource Sprawl" and "Orphaned Resources" which cause security gaps and unnecessary costs.
+   - **AML Analogy:** **"Account Closure Procedures"** – ensuring that once a business relationship ends, all associated cards, access codes, and credit lines are properly deactivated, not left "active but forgotten".
+
 ---
 
 ### [2026-05-13] Infrastructure Security: Network Isolation & Defense in Depth
