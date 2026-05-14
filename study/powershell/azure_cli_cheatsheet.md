@@ -60,6 +60,17 @@ az role assignment create --assignee "lab-admin@<YOUR_DOMAIN>.onmicrosoft.com" -
 > [!TIP]
 > **Advanced IAM Concept:** In professional environments, we use **Azure ABAC** to add *Conditions* to the `User Access Administrator` role, so they can only assign specific "lower" roles (e.g., they can assign `Reader` but not `Owner`).
 
+### Dynamic IP Lockdown (Security Automation)
+Use this PowerShell snippet to automatically detect your current public IP and update an NSG rule to allow access only from your location.
+```powershell
+# 1. Get current public IP
+$MyIP = Invoke-RestMethod -Uri "https://api.ipify.org"
+Write-Host "Detected your public IP: $MyIP"
+
+# 2. Update NSG rule to allow ONLY this IP
+az network nsg rule update --name AllowSSH --nsg-name <NSG_NAME> --resource-group <RG_NAME> --source-address-prefixes $MyIP
+```
+
 ## 🏗️ Infrastructure Deployment (Creation)
 Essential commands for setting up new laboratory environments.
 
@@ -83,9 +94,19 @@ az network nsg create --name <NSG_NAME> --resource-group <RG_NAME>
 az network nsg rule create --name AllowSSH --resource-group <RG_NAME> --nsg-name <NSG_NAME> --priority 1000 --destination-port-ranges 22 --access Allow --protocol Tcp
 ```
 
-### Virtual Machines
+### Virtual Machines (Secure Creation Flow)
+Best practice: Detect your IP first, then apply it during creation.
 ```powershell
-# Create a basic Linux VM (generates SSH keys if missing)
+# 1. Get current IP
+$MyIP = Invoke-RestMethod -Uri "https://api.ipify.org"
+
+# 2. Create NSG
+az network nsg create --name <NSG_NAME> --resource-group <RG_NAME>
+
+# 3. Create SSH rule allowed ONLY for your current IP
+az network nsg rule create --name AllowSSH --resource-group <RG_NAME> --nsg-name <NSG_NAME> --priority 1000 --destination-port-ranges 22 --access Allow --protocol Tcp --source-address-prefixes $MyIP
+
+# 4. Create VM using the pre-configured NSG
 az vm create --resource-group <RG_NAME> --name <VM_NAME> --image Ubuntu2204 --admin-username azureuser --generate-ssh-keys --vnet-name <VNET_NAME> --subnet <SUBNET_NAME> --nsg <NSG_NAME>
 ```
 
@@ -116,3 +137,29 @@ az resource delete --ids <RESOURCE_ID>
 - **Output Formats:** Use `--output table` for readability, or `--output json` if you need details for a script.
 - **Querying:** Use `--query "[].name"` to filter specific fields (uses JMESPath).
 - **Cleanup Check:** Always run `az resource list` after a cleanup to ensure no "orphaned" disks or IPs are left behind.
+
+## 🚀 Smart Connectivity Script (Pro-Tip)
+Combine all steps into one "Start Lab" script to handle login, IP check, and SSH connection.
+
+```powershell
+# start-lab.ps1 logic:
+$MyIP = Invoke-RestMethod -Uri "https://api.ipify.org"
+
+# 1. Check if logged in, if not - login
+az account show --output none
+if ($LASTEXITCODE -ne 0) { az login }
+
+# 2. Get current IP from the NSG rule
+$CurrentRuleIP = az network nsg rule show --name AllowSSH --nsg-name <NSG_NAME> --resource-group <RG_NAME> --query sourceAddressPrefix --output tsv
+
+# 3. Update only if changed
+if ($MyIP -ne $CurrentRuleIP) {
+    Write-Host "IP changed from $CurrentRuleIP to $MyIP. Updating NSG..."
+    az network nsg rule update --name AllowSSH --nsg-name <NSG_NAME> --resource-group <RG_NAME> --source-address-prefixes $MyIP
+} else {
+    Write-Host "IP is still $MyIP. No update needed."
+}
+
+# 4. Connect to VM
+ssh azureuser@<VM_PUBLIC_IP>
+```
