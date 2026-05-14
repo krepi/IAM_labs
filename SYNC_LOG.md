@@ -12,6 +12,16 @@ Ten plik służy do przekazywania kontekstu między agentami AI pracującymi na 
 
 ---
 
+## [2026-05-14] - PC Session: Repository Sync & Environment Alignment
+**Wykonane zadania:**
+1. **Synchronizacja Git:** Wykonano `git pull` na gałęzi `first_month`.
+2. **Aktualizacja Kontekstu:** Pomyślnie pobrano zmiany z sesji Mac (reorganizacja dokumentacji, plany na audyt IAM).
+3. **Weryfikacja:** Repozytorium na stacji Windows jest teraz w pełni zsynchronizowane ze stanem zdalnym.
+
+**Status:** Ready to continue with Azure CLI scripts.
+
+---
+
 ## [2026-05-14] - Mac Session: Resource Audit & IAM Roadmap
 **Wykonane zadania:**
 1. **Audyt Azure:** Potwierdzono stan "Clean Slate" – grupa `rg-iam-labs` istnieje, ale jest pusta.
