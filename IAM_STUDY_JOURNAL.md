@@ -8,6 +8,25 @@ This study journal is a dedicated log for tracking my professional pivot from AM
 
 ---
 
+### [2026-05-14] Delegated Administration & Granular Scoping (Advanced RBAC)
+
+1. **User Access Administrator (Delegation)**
+   - **Definition:** A specialized RBAC role that allows a user to manage role assignments for others, but *without* the full resource management powers of an 'Owner'.
+   - **Why it matters:** In a secure IAM model, we separate the "What" (managing resources) from the "Who" (managing access). Giving someone `Contributor` + `User Access Administrator` is safer than giving them `Owner`.
+   - **AML Analogy:** **"Authorized Signatory Management"** – an officer who is allowed to add new authorized users to a corporate account, but doesn't have the authority to actually withdraw the funds themselves.
+
+2. **Granular Scoping (Resource-Level Scope)**
+   - **Action:** Using a specific Resource ID (e.g., a single VM ID) in the `--scope` parameter of a role assignment.
+   - **Why it matters:** It is the ultimate implementation of **Least Privilege**. Instead of seeing the whole resource group, the user sees only the specific "room" (resource) they are allowed to enter.
+   - **AML Analogy:** **"Safe Deposit Box Access"** – a customer has access to the bank (Subscription), the vault room (Resource Group), but only their *specific* box (Resource) can be opened by their key.
+
+3. **Azure ABAC (Role Assignment Conditions)**
+   - **Concept:** Adding "If/Then" logic to a role assignment. For example: "You can assign roles, BUT only the 'Reader' role and ONLY within this specific department."
+   - **Why it matters:** Prevents "Privilege Escalation". It ensures that a delegated admin cannot accidentally (or intentionally) grant someone higher permissions than they should have.
+   - **AML Analogy:** **"Threshold-Based Approval"** – a junior investigator can approve transactions, but ONLY if they are below $5,000 and the customer is from a "Low Risk" category.
+
+---
+
 ### [2026-05-13] Infrastructure Security: Network Isolation & Defense in Depth
 
 1. **Network Isolation (Micro-segmentation)**
