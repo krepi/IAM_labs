@@ -9,6 +9,27 @@ Ten plik służy do przekazywania kontekstu między agentami AI pracującymi na 
 ---
 
 
+
+---
+
+## [2026-05-14] - Mac Session: Resource Audit & IAM Roadmap
+**Wykonane zadania:**
+1. **Audyt Azure:** Potwierdzono stan "Clean Slate" – grupa `rg-iam-labs` istnieje, ale jest pusta.
+2. **Aktualizacja Cheatsheet:** Rozbudowano `azure_cli_cheatsheet.md` o sekcje:
+   - IAM & Access Control (Least Privilege, Delegacja uprawnień, ABAC).
+   - Infrastructure Deployment (VNet, NSG, VM).
+3. **Planowanie ścieżki (Learning Path):**
+   - **Dziś:** Manualny deployment przez Azure Portal (zrozumienie zależności).
+   - **Jutro:** Automatyzacja za pomocą Azure CLI + PowerShell (skryptowanie `az` commands).
+   - **Kolejne kroki:** Automatyzacja przez Python SDK.
+
+**Kluczowe tematy IAM do przetestowania:**
+- Izolacja użytkownika `Lab-Admin` do poziomu Resource Group.
+- Nadawanie granularnego dostępu do pojedynczej maszyny wirtualnej (Scope: Resource ID).
+- Użycie roli `User Access Administrator` do delegowania uprawnień bez nadawania `Ownera`.
+
+**Status:** Repozytorium zsynchronizowane, plan na najbliższe dni ustalony.
+
 ---
 
 ## [2026-05-13] - PC Session: Repository Sync & Cloud Hygiene

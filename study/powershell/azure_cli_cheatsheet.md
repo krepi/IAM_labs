@@ -18,6 +18,77 @@ This cheat sheet contains essential Azure CLI commands used for resource managem
 | `az vm list --output table` | Lists all Virtual Machines. |
 | `az network vnet list --output table` | Lists all Virtual Networks. |
 
+## 🔐 IAM & Access Control (Least Privilege)
+Best practices for managing access without using the root/main account.
+
+### Create a new Entra ID (Azure AD) User
+```powershell
+# Create user (password must meet complexity requirements)
+az ad user create --display-name "Lab-Admin" --password "<STRONG_PASSWORD>" --user-principal-name "lab-admin@<YOUR_DOMAIN>.onmicrosoft.com"
+```
+
+### Assign RBAC Role to a Resource Group (Scope)
+Instead of giving permissions to the whole subscription, limit the user to one Resource Group.
+```powershell
+# Assign 'Contributor' role to the user, scoped only to our RG
+az role assignment create --assignee "lab-admin@<YOUR_DOMAIN>.onmicrosoft.com" --role "Contributor" --scope "/subscriptions/<SUBSCRIPTION_ID>/resourceGroups/<RG_NAME>"
+```
+
+### Create a Service Principal (for automation/scripts)
+If you want a "bot" to manage resources instead of a human user:
+```powershell
+az ad sp create-for-rbac --name "sp-iam-labs-bot" --role "Contributor" --scopes "/subscriptions/<SUBSCRIPTION_ID>/resourceGroups/<RG_NAME>"
+```
+
+### Assign Role to a SPECIFIC Resource (Granular Access)
+Use this if you want to give someone access to only ONE VM, instead of the whole group.
+```powershell
+# 1. Get the Resource ID of the specific VM
+$VM_ID=$(az vm show --name <VM_NAME> --resource-group <RG_NAME> --query id --output tsv)
+
+# 2. Assign role scoped ONLY to that VM
+az role assignment create --assignee "wife@<YOUR_DOMAIN>.com" --role "Virtual Machine Contributor" --scope $VM_ID
+```
+
+### Delegated Administration (User Access Administrator)
+To allow a user to manage permissions for others (like your wife) within a specific scope, but without making them an 'Owner'.
+```powershell
+# This user can now assign roles to others within this Resource Group
+az role assignment create --assignee "lab-admin@<YOUR_DOMAIN>.onmicrosoft.com" --role "User Access Administrator" --scope "/subscriptions/<SUBSCRIPTION_ID>/resourceGroups/<RG_NAME>"
+```
+
+> [!TIP]
+> **Advanced IAM Concept:** In professional environments, we use **Azure ABAC** to add *Conditions* to the `User Access Administrator` role, so they can only assign specific "lower" roles (e.g., they can assign `Reader` but not `Owner`).
+
+## 🏗️ Infrastructure Deployment (Creation)
+Essential commands for setting up new laboratory environments.
+
+### Resource Group
+```powershell
+az group create --name <RG_NAME> --location <LOCATION> # e.g., polandcentral
+```
+
+### Networking (VNet & Subnet)
+```powershell
+# Create VNet and a default subnet in one go
+az network vnet create --name <VNET_NAME> --resource-group <RG_NAME> --address-prefix 10.0.0.0/16 --subnet-name <SUBNET_NAME> --subnet-prefix 10.0.1.0/24
+```
+
+### Network Security (NSG)
+```powershell
+# Create NSG
+az network nsg create --name <NSG_NAME> --resource-group <RG_NAME>
+
+# Create an Inbound Rule (e.g., Allow SSH)
+az network nsg rule create --name AllowSSH --resource-group <RG_NAME> --nsg-name <NSG_NAME> --priority 1000 --destination-port-ranges 22 --access Allow --protocol Tcp
+```
+
+### Virtual Machines
+```powershell
+# Create a basic Linux VM (generates SSH keys if missing)
+az vm create --resource-group <RG_NAME> --name <VM_NAME> --image Ubuntu2204 --admin-username azureuser --generate-ssh-keys --vnet-name <VNET_NAME> --subnet <SUBNET_NAME> --nsg <NSG_NAME>
+```
+
 ## 🧹 Cloud Hygiene (Cleanup)
 **Important:** Most delete commands are permanent. Use with caution.
 
