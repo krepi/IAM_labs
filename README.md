@@ -23,23 +23,26 @@ I am now actively pivoting my career towards **Cloud Security and Identity & Acc
 
 ## 🗂️ Project Structure & Labs
 
-*   📁 **`powershell/`**
-    *   *Scripts designed for Microsoft Entra ID administration (e.g., User Provisioning, RBAC audits, and Conditional Access reviews).*
-*   📁 **`python/`**
-    *   *Automation scripts interacting with Microsoft Graph API for complex access reporting and Identity correlation.*
-*   📁 **`plans/`**
-    *   *My strategic development roadmap, learning notes, and project architecture documents.*
+The repository is organized to separate infrastructure management (AZ-104) from advanced identity security (SC-300), following the principle of building solid cloud foundations before specializing in IAM.
 
-*(Note: Detailed lab artifacts and demonstration codes will populate these directories as I progress through hands-on Azure modules and TryHackMe pathways).*
+*   📁 **`labs/az-104-administration/`**
+    *   *Core Azure infrastructure labs: Networking (VNet/NSG), Compute (VMs), Storage, and basic platform governance.*
+*   📁 **`labs/sc-300-identity/`**
+    *   *Advanced Identity & Access Management: Identity Lifecycle, Entra ID Governance, PIM, and RBAC deep-dives.*
+*   📁 **`study/`**
+    *   *Code-based learning area with subfolders for **Python** (Graph API, SDKs) and **PowerShell** (Az Module, scripting).*
+*   📁 **`docs/`**
+    *   *Strategic plans, roadmaps, and architectural documentation.*
 
 ## 📜 Certifications & Learning Path
 *   ✅ **AZ-900:** Microsoft Azure Fundamentals
 *   ✅ **Background:** IT Engineering Degree | 17 Yrs Navy | 4 Yrs Logistics Manager | Global Banking Compliance
+*   ⏳ **AZ-104:** Microsoft Azure Administrator *(Foundations focus - in progress)*
 *   ⏳ **ISC2 CC:** Certified in Cybersecurity *(in progress)*
-*   🎯 **SC-900 & SC-300:** Target Security and Access Administrator tracks
+*   🎯 **SC-300:** Microsoft Identity and Access Administrator *(Specialization target)*
 
 ## 📬 Contact
 *   [🔗 LinkedIn Profile Placeholder](#-link-to-be-added-when-i-am-ready-for-networking)
 
 ---
-*Disclaimer: All code inside this repository strictly adheres to the Least Privilege Principle. Secrets and credentials are never committed directly. Development rules are governed by repository-level instructions.*
+*Disclaimer: All code inside this repository strictly adheres to the Least Privilege Principle. Secrets and credentials are never committed directly. Development rules are governed by repository-level instructions (`GEMINI.md`).*
