@@ -23,6 +23,16 @@ Ten plik służy do przekazywania kontekstu między agentami AI pracującymi na 
 **Status:** Lab 01 foundation understood. Ready for CLI automation tomorrow.
 
 
+
+---
+
+## [2026-05-15] - Evening Session: Infrastructure Verification & Cleanup (Lab 02)
+**Wykonane zadania:**
+1. **Weryfikacja Azure:** Potwierdzono pomyślne manualne wdrożenie infrastruktury (VNet, Subnets, NSG, VM).
+2. **Audyt Compliance:** Uruchomiono `verify_infrastructure.ps1` – wszystkie testy (IP lockdown, porty, asocjacje) zakończone statusem **[PASS]**.
+3. **Automatyzacja Cleanup:** Stworzono i przetestowano `cleanup_infrastructure.ps1`.
+4. **Status:** Lab 02 w pełni zakończony. Grupa `rg-iam-labs` jest czysta.
+
 ---
 
 ## [2026-05-15] - Mac Session: Strategic Reorganization & AZ-104 Pivot
