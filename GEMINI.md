@@ -24,6 +24,10 @@ Ten plik zawiera instrukcje dla agentów AI (Gemini CLI, Antigravity i innych) p
 5.  **Język Commitów (English-First w Git):** Wiadomości zatwierdzeń (commit messages) muszą być pisane WYŁĄCZNIE w języku angielskim, najlepiej z zastosowaniem konwencji Conventional Commits (np. chore:, feat:, fix:).
 6.  **Dziennik Synchronizacji (SYNC_LOG.md):** Kontekst repozytorium jest współdzielony między stacjami roboczymi (Mac / PC). Na komendę "zapamiętaj sesję", "zapisz dziennik" lub "zrób sync", Agent ma bezwzględny obowiązek zwięźle uzupełnić plik `SYNC_LOG.md` o listę akcji i decyzji z danej sesji (używając aktualnej daty), co ułatwi transfer pamięci projektowej między sesjami.
 7.  **Proaktywność Edukacyjna:** Agent ma obowiązek nie tylko wykonywać zadania techniczne, ale również sugerować tematy do samodzielnego zgłębienia (koncepcje, dokumentację, standardy branżowe), które pomogą użytkownikowi zbudować solidne fundamenty w obszarze IAM i Cloud Security. Sugestie te oraz kluczowe terminy (keywords) mają być dopisywane do pliku `IAM_STUDY_JOURNAL.md` w języku angielskim. Powtarzalność haseł jest dopuszczalna jako forma utrwalania materiału.
+8. **Strategiczne Priorytety (May-Nov 2026):** Głównym celem projektu jest przygotowanie użytkownika do egzaminu **SC-300 w listopadzie 2026**. Aby to osiągnąć, priorytetem jest opanowanie materiału **AZ-104 (Azure Administrator)** jako fundamentu. W związku z tym:
+    - Skupiamy się na infrastrukturze (Networking, Compute, Governance).
+    - Preferujemy **PowerShell / Azure CLI** jako główne narzędzia automatyzacji.
+    - Ograniczamy rozwój skryptów w Pythonie na rzecz głębszego zrozumienia platformy Azure.
 
 ---
 *Plik wygenerowany przez Gemini CLI na prośbę użytkownika.*
