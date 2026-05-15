@@ -30,7 +30,7 @@ Ten plik służy do przekazywania kontekstu między agentami AI pracującymi na 
 1. **Reorganizacja Labów:** Przebudowano strukturę folderu `labs/`, aby oddzielić fundamenty administracyjne od zaawansowanego IAM:
    - Nowy dział: `labs/az-104-administration/` (przeniesiono networking i basic management).
    - Nowy dział: `labs/sc-300-identity/` (przeniesiono identity provisioning).
-2. **Aktualizacja Dokumentacji:** Odświeżono główny `README.md` oraz README Lab 02, uwzględniając nową strukturę i cel edukacyjny (AZ-104 Foundations).
+2. **Aktualizacja Dokumentacji:** Odświeżono główny `README.md` oraz README Lab 02. Dodano nowe pliki "Landing Page" (README) wewnątrz `labs/az-104-administration/` oraz `labs/sc-300-identity/` dla lepszego zarysu ścieżek edukacyjnych.
 3. **Automatyzacja (IaC):** Stworzono skrypt `deploy_infrastructure.ps1` w Lab 02, który automatyzuje wczorajsze manualne kroki z portalu (VNet, Subnets, NSG Lockdown, VM).
 4. **Synchronizacja:** Wykonano `git pull` na początku sesji (pobrano wpis z PC o Manual Deployment).
 
