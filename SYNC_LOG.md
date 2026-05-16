@@ -24,6 +24,18 @@ Ten plik służy do przekazywania kontekstu między agentami AI pracującymi na 
 
 
 
+
+---
+
+## [2026-05-16] - Mac Session: Modular IaC & Template Architecture
+**Wykonane zadania:**
+1. **Infrastruktura jako Kod (Modułowość):** Wprowadzono architekturę opartą na szablonach (templates), aby zapewnić spójność środowisk w różnych laboratoriach.
+2. **Nowy katalog `templates/`:** Stworzono moduły `networking/base-vnet-nsg.ps1` oraz `compute/base-vm-jumpbox.ps1`.
+3. **Refaktoryzacja:** Zaktualizowano Lab 02, aby korzystał z centralnych szablonów zamiast lokalnych skryptów wdrożeniowych.
+4. **Strategia:** Potwierdzono wykorzystanie wspólnej bazy sieciowej dla ścieżek AZ-104 i SC-300.
+
+**Status:** Architektura gotowa na szybkie wdrażanie kolejnych laboratoriów.
+
 ---
 
 ## [2026-05-15] - Evening Session: Infrastructure Verification & Cleanup (Lab 02)

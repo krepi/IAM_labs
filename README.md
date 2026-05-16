@@ -31,6 +31,8 @@ The repository is organized to separate infrastructure management (AZ-104) from 
     *   *Advanced Identity & Access Management: Identity Lifecycle, Entra ID Governance, PIM, and RBAC deep-dives.*
 *   📁 **`study/`**
     *   *Code-based learning area with subfolders for **Python** (Graph API, SDKs) and **PowerShell** (Az Module, scripting).*
+*   📁 **`templates/`**
+    *   *Modular Infrastructure as Code (IaC) components for consistent environment deployment across labs.*
 *   📁 **`docs/`**
     *   *Strategic plans, roadmaps, and architectural documentation.*
 
