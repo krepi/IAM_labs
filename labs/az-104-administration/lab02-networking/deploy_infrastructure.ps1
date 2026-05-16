@@ -19,10 +19,10 @@ if ($LASTEXITCODE -ne 0) {
 
 # Deploy Networking
 Write-Host "`n[1/2] Calling Networking Template..." -ForegroundColor Cyan
-. ../../../templates/networking/base-vnet-nsg.ps1 -RG_NAME $RG_NAME -LOCATION $LOCATION
+. ../../templates/networking/base-vnet-nsg.ps1 -RG_NAME $RG_NAME -LOCATION $LOCATION
 
 # Deploy Compute (Jumpbox)
 Write-Host "`n[2/2] Calling Compute Template..." -ForegroundColor Cyan
-. ../../../templates/compute/base-vm-jumpbox.ps1 -RG_NAME $RG_NAME -LOCATION $LOCATION
+. ../../templates/compute/base-vm-jumpbox.ps1 -RG_NAME $RG_NAME -LOCATION $LOCATION
 
 Write-Host "`n--- Modular Deployment Complete! ---" -ForegroundColor Green

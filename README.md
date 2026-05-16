@@ -25,14 +25,13 @@ I am now actively pivoting my career towards **Cloud Security and Identity & Acc
 
 The repository is organized to separate infrastructure management (AZ-104) from advanced identity security (SC-300), following the principle of building solid cloud foundations before specializing in IAM.
 
-*   📁 **`labs/az-104-administration/`**
-    *   *Core Azure infrastructure labs: Networking (VNet/NSG), Compute (VMs), Storage, and basic platform governance.*
-*   📁 **`labs/sc-300-identity/`**
-    *   *Advanced Identity & Access Management: Identity Lifecycle, Entra ID Governance, PIM, and RBAC deep-dives.*
+*   📁 **`labs/`**
+    *   **`az-104-administration/`**: Core Azure infrastructure labs.
+    *   **`sc-300-identity/`**: Advanced Identity & Access Management.
+    *   **`templates/`**: Modular IaC components for consistent environment deployment.
+    *   **`common/`**: Shared operational scripts (e.g., `start-lab.ps1`).
 *   📁 **`study/`**
-    *   *Code-based learning area with subfolders for **Python** (Graph API, SDKs) and **PowerShell** (Az Module, scripting).*
-*   📁 **`templates/`**
-    *   *Modular Infrastructure as Code (IaC) components for consistent environment deployment across labs.*
+    *   *Code-based learning area with subfolders for **Python** and **PowerShell**.*
 *   📁 **`docs/`**
     *   *Strategic plans, roadmaps, and architectural documentation.*
 
