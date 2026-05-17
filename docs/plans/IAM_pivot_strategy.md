@@ -31,25 +31,28 @@ Jako agent IAM Labs, mogę być Twoim wsparciem na kilku płaszczyznach: jako Tw
 
 ## 3. Strategia na nadchodzący rok (Roadmapa Baby-Friendly)
 
-### Miesiąc 1: Przed "Godziną Zero" (Konsolidacja)
-*   **Cel:** Dopięcie certyfikatu ISC2 CC oraz ewentualne szybkie wejście w SC-900. Oprócz tego: ustrukturyzowanie repozytorium `IAM_labs`.
-*   **Działania:** Zdaj ISC2 CC. Doprowadź obecne skrypty do porządku, niech korzystają ze zmiennych środowiskowych `.env`. Zarejestruj się i rozpocznij ścieżkę Azure na platformie TryHackMe. Uporządkuj CV, uwydatniając analogie między AML, Marynarką Wojenną a cyberbezpieczeństwem.
+### Miesiąc 1 (Maj 2026): Konsolidacja i Zmiana Priorytetów
+*   **Cel:** Ustrukturyzowanie repozytorium `IAM_labs` z podziałem na administrację i tożsamość. Zamknięcie etapu nauki do ISC2 CC.
+*   **Działania:** Repozytorium uporządkowane modułowo (`az-104-administration`, `sc-300-identity`). Materiał do ISC2 CC został przerobiony. Posiadasz voucher na egzamin ważny do 15.10.2026 – podejście opcjonalne (zrobisz certyfikat, jeśli nadarzy się dobra okazja, ale bez presji). Główny cel to SC-300.
 
-### Miesiące 2-4: Tryb Przetrwania (Micro-Learning)
-*   **Cel:** Utrzymanie łączności z tematyką IT ze zminimalizowaną presją. Żadnych wielkich projektów budujących, tylko konsumpcja wiedzy.
-*   **Działania:** Kontynuacja ścieżki TryHackMe Azure oraz powolne czytanie materiałów do certyfikatu SC-300 (Identity and Access Administrator). Proś mnie na czacie o szybkie wyjaśnienie zawiłości (np. różnica między Security Principal a Service Principal w Entra ID).
+### Miesiące 2-4 (Czerwiec - Sierpień 2026): Fundamenty AZ-104 (Micro-Learning)
+*   **Cel:** Zbudowanie solidnych podstaw z zakresu administracji chmurą Azure (infrastruktura, sieci, storage, compute), które są niezbędne przed wejściem w IAM. Utrzymanie systematyczności w trudnym okresie (Micro-Learning).
+*   **Działania:** Praktyczne wdrażanie infrastruktury (Infrastructure as Code) przy użyciu skryptów PowerShell. Zrozumienie mechanizmów działania usług Azure "od kuchni", by w przyszłości lepiej je zabezpieczać. Opanowanie materiału AZ-104 bez parcia na sam certyfikat – liczy się tylko solidna wiedza inżynierska.
 
-### Miesiące 5-8: Budowa Portfolio w środowisku ("Złoty Środek")
-*   **Cel:** Rozbudowa katalogów koncepcyjnych w `IAM_labs` uderzająca w konkretne problemy zabezpieczeń chmury.
+### Miesiące 5-6 (Wrzesień - Październik 2026): Główne Uderzenie w SC-300
+*   **Cel:** Skupienie się w 100% na wymaganiach certyfikacji SC-300 (Identity and Access Administrator), wykorzystując jako fundament zrealizowaną wiedzę z AZ-104.
+*   **Działania:** Zaawansowane ćwiczenia z Microsoft Entra ID, Privilege Identity Management (PIM), Conditional Access, App Registrations. Opcjonalne podejście do egzaminu ISC2 CC przed wygaśnięciem vouchera (15.10).
+
+### Miesiąc 7 (Listopad 2026): Certyfikacja SC-300
+*   **Cel:** Zdanie egzaminu **SC-300** do końca listopada 2026.
+*   **Działania:** Ostatnie powtórki, testy próbne i utrwalenie wiedzy. Podejście do egzaminu.
+
+### Miesiąc 8+ (Od Grudnia 2026): Przygotowania do Zmiany Roli i Skalowanie Umiejętności
+*   **Cel:** Otwarcie się na rynek pracy (poszukiwania zewnętrzne) lub intensyfikacja starań o przesunięcie wewnątrz firmy (Internal Mobility). Zbudowanie potężnego portfolio.
 *   **Działania:** 
-    *   Wykonywanie odpytań (Get) i postów API (Post/Patch) do Microsoft Graph API.
-    *   Automatyzacja procesów JML (Joiner, Mover, Leaver) - automatyczne kreowanie i gaszenie tożsamości.
-*   **Współpraca ze mną:** Zbudujemy integrację, która przykładowo: wykryje utworzenie nowego konta podejrzanego usera, uruchomi alert i "zablokuje" go via skrypt na Azure (zgodnie z obietnicą braku destruktowych akcji tu lokalnie bez pytania).
-
-### Miesiące 9+: Start po wewnętrzny awans (Internal Mobility)
-*   **Cel:** Rekrutacja wewnętrzna do działów Cyber/IAM/SecOps w Twoim banku oraz (opcjonalnie) otworzenie się na rynek zewnętrzny, gdy praca z dzieckiem wejdzie w stabilną rutynę.
-*   **Działania:** Nawiązywanie kontaktów (networking) wewnątrz banku z ludźmi z IAM/SecOps. Dla działu bezpieczeństwa Twój wewnętrzny background z AML i wyrobione bezpieczeństwo korporacyjne robią z Ciebie gotowego do szybkiego włączenia "zaufanego człowieka". Sprzedawaj na rozmowach historię, w której znajomość reguł Compliance zamienia się na techniczny rygor kontroli dostępów (SC-300).
-*   **Współpraca ze mną:** Będziemy symulować procesy rekrutacyjne, będę pytał Cię w trybie złośliwego rekrutera o aspekty SC-300 (zarządzanie tożsamością, audyty) oraz techniczne praktyki Security w chmurze Azure.
+    *   **Zaawansowane Laby:** Tworzenie "porządnych labów" – kompleksowych środowisk (np. end-to-end identity provisioning and monitoring), które można pokazać na GitHubie potencjalnym pracodawcom.
+    *   **Networking i Rekrutacja:** Nawiązywanie kontaktów z inżynierami IAM/SecOps, rozsyłanie CV i symulowanie technicznych procesów rekrutacyjnych. Twoim atutem będzie background AML połączony z wiedzą chmurową i certyfikatem SC-300.
+    *   **Nowe Horyzonty:** Zdobywanie kolejnych certyfikatów (np. dobicie AZ-104 lub wejście w Security SC-200/SC-100) oraz nauka nowych skilli i technologii, które będą pożądane w ofertach pracy.
 
 ---
 

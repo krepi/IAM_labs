@@ -4,26 +4,13 @@ Ten plik służy do przekazywania kontekstu między agentami AI pracującymi na 
 
 
 
-
-
 ---
 
-
-
----
-
-## [2026-05-14] - PC Session: Portal Walkthrough & Lab Hygiene
+## [2026-05-17] - Mac Session: Strategy Update & Future Planning
 **Wykonane zadania:**
-1. **Synchronizacja Git:** Wykonano `git pull` i zaktualizowano lokalne repozytorium.
-2. **Lab 01 (Manual):** Pomyślnie przeprowadzono manualny deployment infrastruktury przez Azure Portal (VNet, Subnets, NSG, VM).
-3. **Dokumentacja:** Stworzono `MANUAL_PORTAL.md` z analizą architektury i bezpieczeństwa (Zero Trust, Least Privilege).
-4. **Cloud Hygiene:** Całkowicie wyczyszczono grupę zasobów `rg-iam-labs` po zakończeniu sesji, przygotowując grunt pod jutrzejszą automatyzację.
-5. **Edukacja:** Zaktualizowano `IAM_STUDY_JOURNAL.md` o 4 nowe pojęcia z zakresu sieci i bezpieczeństwa.
-
-**Status:** Lab 01 foundation understood. Ready for CLI automation tomorrow.
-
-
-
+1. **Aktualizacja Strategii:** Zmodyfikowano `IAM_pivot_strategy.md`. Zdefiniowano SC-300 jako główny cel certyfikacyjny (do końca listopada 2026).
+2. **Korekta Kursu:** Opcjonalne podejście do ISC2 CC (wykorzystanie vouchera). Skupienie się na architekturze chmurowej AZ-104 jako fundamencie przed egzaminem SC-300.
+3. **Plany na jutro:** Rozpoczęcie praktycznych ćwiczeń i testów z zakresu AZ-104 w zautomatyzowanym środowisku labowym.
 
 ---
 
@@ -38,7 +25,7 @@ Ten plik służy do przekazywania kontekstu między agentami AI pracującymi na 
 
 ---
 
-## [2026-05-15] - Evening Session: Infrastructure Verification & Cleanup (Lab 02)
+## [2026-05-15] - PC Session: Infrastructure Verification & Cleanup (Lab 02)
 **Wykonane zadania:**
 1. **Weryfikacja Azure:** Potwierdzono pomyślne manualne wdrożenie infrastruktury (VNet, Subnets, NSG, VM).
 2. **Audyt Compliance:** Uruchomiono `verify_infrastructure.ps1` – wszystkie testy (IP lockdown, porty, asocjacje) zakończone statusem **[PASS]**.
@@ -59,6 +46,18 @@ Ten plik służy do przekazywania kontekstu między agentami AI pracującymi na 
 **Decyzja strategiczna:** Budowa solidnych fundamentów z zakresu AZ-104 (sieci, compute, storage) przed pogłębianiem specjalizacji SC-300, aby uniknąć pracy "po omacku" w chmurze.
 
 **Status:** Struktura gotowa na nowe laboratoria administracyjne.
+
+---
+
+## [2026-05-14] - PC Session: Portal Walkthrough & Lab Hygiene
+**Wykonane zadania:**
+1. **Synchronizacja Git:** Wykonano `git pull` i zaktualizowano lokalne repozytorium.
+2. **Lab 01 (Manual):** Pomyślnie przeprowadzono manualny deployment infrastruktury przez Azure Portal (VNet, Subnets, NSG, VM).
+3. **Dokumentacja:** Stworzono `MANUAL_PORTAL.md` z analizą architektury i bezpieczeństwa (Zero Trust, Least Privilege).
+4. **Cloud Hygiene:** Całkowicie wyczyszczono grupę zasobów `rg-iam-labs` po zakończeniu sesji, przygotowując grunt pod jutrzejszą automatyzację.
+5. **Edukacja:** Zaktualizowano `IAM_STUDY_JOURNAL.md` o 4 nowe pojęcia z zakresu sieci i bezpieczeństwa.
+
+**Status:** Lab 01 foundation understood. Ready for CLI automation tomorrow.
 
 ---
 
