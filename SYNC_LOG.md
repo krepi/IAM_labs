@@ -6,6 +6,16 @@ Ten plik służy do przekazywania kontekstu między agentami AI pracującymi na 
 
 ---
 
+## [2026-05-18] - Mac Session: AZ-104 Theory & ARM Templates
+**Wykonane zadania:**
+1. **Analiza Narzędzi:** Przeanalizowano przydatność M365 Developer Program (zdecydowano o wdrożeniu w Miesiącu 5) oraz TryHackMe "Defending Azure" (idealne narzędzie do Micro-Learningu w dni o niskiej energii).
+2. **Teoria IaC:** Omówiono różnice między podejściem imperatywnym (PowerShell/CLI) a deklaratywnym (ARM JSON/Bicep). Zdecydowano o wstrzymaniu nauki języka Bicep na rzecz skupienia się na fundamentach.
+3. **Praktyka:** Na bazie teorii z MS Learn wygenerowano plik `deploy_arm_template.json` odwzorowujący infrastrukturę Lab 02. Zaktualizowano `README.md` o instrukcję wdrażania szablonów.
+
+**Status:** Przerabianie materiału MS Learn dla AZ-104. Repozytorium wzbogacone o JSON w ramach dowodu koncepcji (PoC).
+
+---
+
 ## [2026-05-17] - Mac Session: Strategy Update & Future Planning
 **Wykonane zadania:**
 1. **Aktualizacja Strategii:** Zmodyfikowano `IAM_pivot_strategy.md`. Zdefiniowano SC-300 jako główny cel certyfikacyjny (do końca listopada 2026).
