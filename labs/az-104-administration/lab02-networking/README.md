@@ -20,6 +20,22 @@ cd labs/az-104-administration/lab02-networking/
 .\deploy_infrastructure.ps1
 ```
 
+### 🏗️ Alternative: Declarative IaC (ARM Template)
+If you want to deploy the exact same infrastructure using an Azure Resource Manager (ARM) JSON Template (a requirement for AZ-104), use the provided `deploy_arm_template.json` file:
+
+```powershell
+# 1. Get your current IP and public SSH key
+$MyIP = Invoke-RestMethod -Uri "https://api.ipify.org"
+$MyPubKey = Get-Content ~/.ssh/id_rsa.pub
+
+# 2. Run the deployment
+az deployment group create `
+    --resource-group rg-iam-labs `
+    --template-file deploy_arm_template.json `
+    --parameters myIpAddress=$MyIP adminPublicKey="$MyPubKey"
+```
+
+
 ## Work Progress
 - [x] Network topology planning.
 - [x] Manual Portal walkthrough (`MANUAL_PORTAL.md`).
