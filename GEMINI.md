@@ -28,6 +28,7 @@ Ten plik zawiera instrukcje dla agentów AI (Gemini CLI, Antigravity i innych) p
     - Skupiamy się na infrastrukturze (Networking, Compute, Governance).
     - Preferujemy **PowerShell / Azure CLI** jako główne narzędzia automatyzacji.
     - Ograniczamy rozwój skryptów w Pythonie na rzecz głębszego zrozumienia platformy Azure.
+9.  **Git Workflow (Zasada Kumulacji Commitów):** Aby uniknąć zaśmiecania historii repozytorium drobnymi zmianami ("pierdołami"), **ZABRANIA SIĘ** wykonywania komend `git commit` i `git push` po każdej drobnej edycji plików (szczególnie w dokumentacji np. w `SYNC_LOG.md` czy `JOB_MARKET_RADAR.md`). Synchronizacja z GitHubem powinna następować wyłącznie na WYRAŹNĄ komendę użytkownika (np. "zakończ sesję", "wypchnij") lub jako jeden zbiorczy commit na sam koniec sesji roboczej (End of Day). Wyjątkiem są zmiany krytyczne ratujące postęp prac.
 
 ---
 *Plik wygenerowany przez Gemini CLI na prośbę użytkownika.*
