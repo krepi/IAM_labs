@@ -8,10 +8,10 @@ Ten plik służy do przekazywania kontekstu między agentami AI pracującymi na 
 
 ## [2026-05-19] - Mac Session: Job Market Radar & Gap Analysis
 **Wykonane zadania:**
-1. **Analiza Rynku:** Przeanalizowano ogłoszenia na stanowiska Junior Cyber Security Analyst (Insider Risk - Bayer) oraz IAM Quality Specialist (SailPoint - Antal).
+1. **Analiza Rynku:** Przeanalizowano ogłoszenia na stanowiska Junior Cyber Security Analyst (Bayer), IAM Quality Specialist (Antal) oraz IAM Cloud Engineer (Antal).
 2. **Nowy Dokument:** Utworzono i rozbudowano plik `JOB_MARKET_RADAR.md` w katalogu `docs/plans/`. 
-3. **Core Skills Radar:** Wyodrębniono i dodano do radaru kluczowe umiejętności z ofert, m.in. procesy IGA (JML, SoD, Recertyfikacja), SQL, PowerShell oraz narzędzia testowe.
-4. **Wnioski:** Certyfikat SC-300 pozostaje świetnym celem, ponieważ pokrywa uniwersalne procesy IGA, których wymaga rynek, niezależnie od specyficznego systemu (jak SailPoint czy Entra ID). Utrzymujemy kierunek.
+3. **Core Skills Radar:** Wyodrębniono kluczowe umiejętności z ofert (m.in. procesy IGA, SQL, PowerShell). Odkryto ogromny potencjał połączenia wiedzy z TypeScript/Next.js z procesami compliance/IAM.
+4. **Wnioski:** Utrzymujemy kierunek na SC-300. Umiejętności programistyczne (TS/React) w połączeniu z wiedzą audytową (AML) i chmurą tworzą profil "jednorożca" na rynku Custom IAM Solutions.
 
 **Status:** Radar na rynku pracy uruchomiony, cel zdefiniowany.
 

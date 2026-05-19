@@ -11,13 +11,15 @@ Zbieramy tutaj interesujące nas ogłoszenia o pracę (Security Analyst, IAM Eng
 ### 🛡️ Technologie (Hard Skills)
 - [ ] **Microsoft Purview (DLP, Insider Risk)** - Wystąpienia: 1
 - [ ] **Systemy SIEM (np. Microsoft Sentinel, Splunk)** - Wystąpienia: 1
-- [ ] **Zarządzanie Tożsamością (Entra ID, SailPoint, RBAC)** - Wystąpienia: 2
+- [ ] **Zarządzanie Tożsamością (Entra ID, SailPoint, RBAC)** - Wystąpienia: 3
 - [ ] **Bazy danych (SQL)** - Wystąpienia: 1
 - [ ] **Skrypty i API (PowerShell, Postman)** - Wystąpienia: 1
+- [ ] **Cloud Native (GCP / Azure / AWS)** - Wystąpienia: 1
+- [ ] **Web Dev / UI (TypeScript, Next.js, React)** - Wystąpienia: 1
 - [ ] *[Miejsce na kolejne technologie z nowych ogłoszeń]*
 
 ### 🕵️ Umiejętności Analityczne (Process Skills)
-- [ ] Analiza logów i alertów (Triage) - Wystąpienia: 1
+- [ ] Analiza logów i alertów (Triage / Audit queries) - Wystąpienia: 2
 - [ ] Tworzenie dokumentacji audytowej / Raportowanie - Wystąpienia: 1
 - [ ] Znajomość frameworków ryzyka (NIST, ISO 27001) - Wystąpienia: 1
 - [ ] **Procesy IGA (JML, SoD, Recertyfikacja)** - Wystąpienia: 1
@@ -58,5 +60,21 @@ Zdejmuje presję z bycia "twardym" inżynierem infrastruktury (od kabli i firewa
 
 **Dlaczego to ogłoszenie jest ważne?**
 Potwierdza, że koncepcje, których będziemy się uczyć przy certyfikacie SC-300 (czyli procesy IGA: JML, Recertyfikacja, Podział Obowiązków - SoD), są **uniwersalne** dla całej branży. Niezależnie od tego, czy narzędziem jest Microsoft Entra ID, czy zewnętrzny kombajn jak SailPoint, procesy biznesowe i compliance (czyli znowu AML!) są zawsze te same. Zwraca też uwagę na to, że SQL i rozumienie metodyk zwinnych (Agile) to cenne dodatki w IAM.
+
+---
+
+### 3. IAM Cloud Engineer
+**Firma:** Antal (Dla klienta)
+**Data znalezienia:** 2026-05-19
+**Status:** **Bardzo wysoki potencjał (Złoty róg obfitości)** ze względu na połączenie wiedzy TypeScript/Next.js z procesami compliance/audit.
+
+**Kluczowe Wymagania (Wyłuskane):**
+*   **Doświadczenie:** Architektura Cloud-native, tworzenie systemów (Programming skills). Tło w security/compliance/audit (Idealne pokrycie z AML).
+*   **Technologie:** TypeScript, Next.js, React, Cloud (GCP/Azure/AWS).
+*   **Koncepcje:** Modele kontroli dostępu (Access control models, RBAC, permissions), praca z logami i danymi audytowymi (Log queries).
+*   **Zadania:** Utrzymanie i rozwój customowej aplikacji IAM, wspieranie właścicieli systemów w projektowaniu autoryzacji, weryfikacja logów pod kątem audytów.
+
+**Dlaczego to ogłoszenie jest ważne?**
+To ogłoszenie pokazuje, że Twoja wcześniejsza wiedza z TypeScript i Next.js to **ukryty skarb**. Na rynku brakuje ludzi, którzy potrafią jednocześnie napisać nowoczesny interfejs użytkownika (React/Next.js) i rozumieją ciężkie procesy biznesowe (Audyty, Logi, IAM, Compliance - czyli Twoje AML). Zazwyczaj programiści nienawidzą audytów i logów security, a analitycy security nie potrafią programować w React. Jesteś w stanie połączyć te dwa światy!
 
 ---
