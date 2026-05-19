@@ -11,13 +11,18 @@ Zbieramy tutaj interesujące nas ogłoszenia o pracę (Security Analyst, IAM Eng
 ### 🛡️ Technologie (Hard Skills)
 - [ ] **Microsoft Purview (DLP, Insider Risk)** - Wystąpienia: 1
 - [ ] **Systemy SIEM (np. Microsoft Sentinel, Splunk)** - Wystąpienia: 1
-- [ ] **Zarządzanie Tożsamością (Entra ID, RBAC)** - Wystąpienia: 1
+- [ ] **Zarządzanie Tożsamością (Entra ID, SailPoint, RBAC)** - Wystąpienia: 2
+- [ ] **Bazy danych (SQL)** - Wystąpienia: 1
+- [ ] **Skrypty i API (PowerShell, Postman)** - Wystąpienia: 1
 - [ ] *[Miejsce na kolejne technologie z nowych ogłoszeń]*
 
 ### 🕵️ Umiejętności Analityczne (Process Skills)
 - [ ] Analiza logów i alertów (Triage) - Wystąpienia: 1
 - [ ] Tworzenie dokumentacji audytowej / Raportowanie - Wystąpienia: 1
 - [ ] Znajomość frameworków ryzyka (NIST, ISO 27001) - Wystąpienia: 1
+- [ ] **Procesy IGA (JML, SoD, Recertyfikacja)** - Wystąpienia: 1
+- [ ] **Modelowanie procesów (UML, BPMN)** - Wystąpienia: 1
+- [ ] **Metodyki pracy (Agile, Scrum, DevOps)** - Wystąpienia: 1
 
 ---
 
@@ -37,5 +42,21 @@ Zbieramy tutaj interesujące nas ogłoszenia o pracę (Security Analyst, IAM Eng
 
 **Dlaczego to ogłoszenie jest ważne?**
 Zdejmuje presję z bycia "twardym" inżynierem infrastruktury (od kabli i firewalli) na rzecz bycia analitykiem danych i ryzyka w systemach informatycznych. Pokazuje, że doświadczenie z AML/KYC można bezpośrednio przetłumaczyć na cyberbezpieczeństwo korporacyjne (Insider Risk, Governance).
+
+---
+
+### 2. IAM Quality Specialist
+**Firma:** Antal (Dla klienta)
+**Data znalezienia:** 2026-05-19
+**Status:** Poza zasięgiem na teraz (Rola Seniorska, mocno skupiona na testowaniu SailPoint).
+
+**Kluczowe Wymagania (Wyłuskane):**
+*   **Doświadczenie:** Wdrożenia, migracje i testowanie systemów Identity.
+*   **Technologie:** SailPoint IdentityIQ/ISC, Azure DevOps, SQL, PowerShell, Postman, Selenium.
+*   **Koncepcje:** Procesy IGA (JML - Joiner-Mover-Leaver, recertyfikacja, SoD - Segregation of Duties), modelowanie procesów (UML/BPMN), audyt IT.
+*   **Miękkie/Procesowe:** Praca w Agile/Scrum, współpraca z biznesem, raportowanie defektów.
+
+**Dlaczego to ogłoszenie jest ważne?**
+Potwierdza, że koncepcje, których będziemy się uczyć przy certyfikacie SC-300 (czyli procesy IGA: JML, Recertyfikacja, Podział Obowiązków - SoD), są **uniwersalne** dla całej branży. Niezależnie od tego, czy narzędziem jest Microsoft Entra ID, czy zewnętrzny kombajn jak SailPoint, procesy biznesowe i compliance (czyli znowu AML!) są zawsze te same. Zwraca też uwagę na to, że SQL i rozumienie metodyk zwinnych (Agile) to cenne dodatki w IAM.
 
 ---

@@ -8,9 +8,10 @@ Ten plik służy do przekazywania kontekstu między agentami AI pracującymi na 
 
 ## [2026-05-19] - Mac Session: Job Market Radar & Gap Analysis
 **Wykonane zadania:**
-1. **Analiza Rynku:** Przeanalizowano ogłoszenie o pracę na stanowisko Junior Cyber Security Analyst (Insider Risk) w kontekście dotychczasowego doświadczenia w AML. Potwierdzono wysokie dopasowanie profilu.
-2. **Nowy Dokument:** Utworzono plik `JOB_MARKET_RADAR.md` w katalogu `docs/plans/`. Plik ten będzie agregował wymagania z ogłoszeń z wykorzystaniem zasady Pareto (80/20), aby zidentyfikować kluczowe technologie (Purview, SIEM) oraz umiejętności miękkie.
-3. **Wnioski:** Utrzymujemy kierunek na AZ-104 i SC-300, planując równoległe, asynchroniczne poznawanie narzędzi SOC/DLP poprzez micro-learning.
+1. **Analiza Rynku:** Przeanalizowano ogłoszenia na stanowiska Junior Cyber Security Analyst (Insider Risk - Bayer) oraz IAM Quality Specialist (SailPoint - Antal).
+2. **Nowy Dokument:** Utworzono i rozbudowano plik `JOB_MARKET_RADAR.md` w katalogu `docs/plans/`. 
+3. **Core Skills Radar:** Wyodrębniono i dodano do radaru kluczowe umiejętności z ofert, m.in. procesy IGA (JML, SoD, Recertyfikacja), SQL, PowerShell oraz narzędzia testowe.
+4. **Wnioski:** Certyfikat SC-300 pozostaje świetnym celem, ponieważ pokrywa uniwersalne procesy IGA, których wymaga rynek, niezależnie od specyficznego systemu (jak SailPoint czy Entra ID). Utrzymujemy kierunek.
 
 **Status:** Radar na rynku pracy uruchomiony, cel zdefiniowany.
 
