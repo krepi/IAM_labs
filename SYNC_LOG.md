@@ -6,6 +6,16 @@ Ten plik służy do przekazywania kontekstu między agentami AI pracującymi na 
 
 ---
 
+## [2026-05-19] - Mac Session: Job Market Radar & Gap Analysis
+**Wykonane zadania:**
+1. **Analiza Rynku:** Przeanalizowano ogłoszenie o pracę na stanowisko Junior Cyber Security Analyst (Insider Risk) w kontekście dotychczasowego doświadczenia w AML. Potwierdzono wysokie dopasowanie profilu.
+2. **Nowy Dokument:** Utworzono plik `JOB_MARKET_RADAR.md` w katalogu `docs/plans/`. Plik ten będzie agregował wymagania z ogłoszeń z wykorzystaniem zasady Pareto (80/20), aby zidentyfikować kluczowe technologie (Purview, SIEM) oraz umiejętności miękkie.
+3. **Wnioski:** Utrzymujemy kierunek na AZ-104 i SC-300, planując równoległe, asynchroniczne poznawanie narzędzi SOC/DLP poprzez micro-learning.
+
+**Status:** Radar na rynku pracy uruchomiony, cel zdefiniowany.
+
+---
+
 ## [2026-05-18] - Mac Session: AZ-104 Theory & ARM Templates
 **Wykonane zadania:**
 1. **Analiza Narzędzi:** Przeanalizowano przydatność M365 Developer Program (zdecydowano o wdrożeniu w Miesiącu 5) oraz TryHackMe "Defending Azure" (idealne narzędzie do Micro-Learningu w dni o niskiej energii).
