@@ -6,7 +6,38 @@ This study journal is a dedicated log for tracking my professional pivot from AM
 
 
 
+
 ---
+
+### [2026-05-20] Data Privacy & Security Boundaries: Local vs Cloud LLM Integration
+
+1. **Data Sovereignty (Local vs. Cloud Boundaries)**
+   - **Definition:** The concept that digital data is subject to the laws and governance structures of the nation or environment where it is located. Running local models (e.g., via Ollama) keeps code completely inside the developer's local storage.
+   - **Why it matters:** In corporate environments, uploading proprietary source code or system configurations to third-party Cloud APIs is often a severe compliance violation. Local execution completely eliminates external data exposure.
+   - **AML Analogy:** **"On-Premises Bank Database"** – keeping customer financial records strictly on local physical servers to comply with Banking Secrecy Acts, rather than exporting it to an unverified SaaS analytical tool.
+
+2. **API Endpoint Masking & Token Security**
+   - **Concept:** Securing access to AI APIs (like Vertex AI or OpenAI) using environment variables and restricted-scope tokens rather than embedding keys in IDE config files.
+   - **Why it matters:** Preventing "Credential Leakage" is a key IAM practice. If an IDE configuration containing a cloud API key is committed to GitHub, attackers can abuse the key, leading to financial loss or infrastructure compromise (Blast Radius expansion).
+   - **AML Analogy:** **"Masked PAN (Primary Account Number)"** – replacing a customer's credit card number with tokens during routing, ensuring that even if the transaction log is exposed, the actual credential remains secure.
+
+3. **High Availability & Disaster Recovery (DR / BCP)**
+   - **Concept:** Building a redundant local development stack (VS Code + Ollama) pointing to the same workspace to ensure continuous operation when cloud quotas/token limits are reached.
+   - **Why it matters:** Relies on the principle of eliminating single points of failure. Having a local failover system ensures that your development pipelines or learning sessions are not interrupted by external service degradation.
+   - **AML Analogy:** **"Business Continuity Planning (BCP)"** – maintaining offline verification systems or backup authorization channels (like localized shadow ledgers) to process critical transactions if the primary international clearing network (e.g., SWIFT link) suffers downtime or reaches transaction limits.
+
+4. **Hardware-Accelerated Security Nodes (HSMs & Local Compute)**
+   - **Concept:** Utilizing dedicated local high-performance hardware (like high-end GPUs with ample VRAM) to run cryptographic, analytical, or generative models locally.
+   - **Why it matters:** In security architecture, offloading sensitive operations (like key generation or log analysis) to dedicated local hardware (Hardware Security Modules - HSMs) prevents side-channel attacks and eliminates network dependency.
+   - **AML Analogy:** **"Dedicated Transaction Screening Engines"** – high-throughput, localized database servers designed to run real-time risk-scoring algorithms on millions of customer profiles without relying on external APIs, ensuring zero-latency compliance execution.
+
+5. **Policy Decision Points (PDP) & Policy Enforcement Points (PEP)**
+   - **Concept:** Core architectural elements in Access Control and Policy Enforcement. The PDP evaluates policies to make authorization decisions, and the PEP enforces those decisions at the entry gate.
+   - **Why it matters:** Feeding `GEMINI.md` rules directly into a local model's system prompt sets up a PDP inside the AI agent. The IDE or the developer's confirmation gate then acts as the PEP, ensuring all actions comply with the repository's governance.
+   - **AML Analogy:** **"Compliance Verification System (PDP)"** vs. **"Transaction Release Desk (PEP)"** – the analytical engine evaluates whether a payment violates sanctions or thresholds (PDP), while the treasury desk blocks or releases the funds based on that decision (PEP).
+
+---
+
 
 ### [2026-05-14] Delegated Administration & Granular Scoping (Advanced RBAC)
 

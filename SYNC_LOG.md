@@ -6,6 +6,18 @@ Ten plik służy do przekazywania kontekstu między agentami AI pracującymi na 
 
 ---
 
+## [2026-05-20] - Mac Session: Local LLM Integration & DR Planning
+**Wykonane zadania:**
+1. **Analiza Antigravity 2:** Omówiono architekturę nowo wydanej wersji Antigravity 2 (narzędzie standalone, dynamiczne subagenty, silnik Gemini 3.5 Flash).
+2. **Projekt Integracji Ollama:** Zaplanowano wdrożenie lokalnego środowiska deweloperskiego (Ollama + VS Code + wtyczka Cline) jako zapasowego rozwiązania (Disaster Recovery / Business Continuity Plan) na wypadek wyczerpania chmurowych limitów.
+3. **Analiza Sprzętowa PC:** Przeanalizowano konfigurację PC (Ryzen 7 7800X3D, RTX 5080 z 16GB VRAM, 32GB RAM DDR5) pod kątem możliwości bezproblemowego i szybkiego uruchamiania lokalnych modeli (np. Qwen 2.5 Coder 14B/32B).
+4. **Rozbudowa Dziennika Nauki:** Zaktualizowano `IAM_STUDY_JOURNAL.md` o 5 nowych koncepcji bezpieczeństwa chmurowego i architektury IAM (Data Sovereignty, API Endpoint Masking, DR/BCP, HSMs/Local Compute, PDP/PEP) wraz z analogiami do procesów AML/bankowości.
+5. **Konfiguracja Zasad:** Ustalono sposób wstrzykiwania reguł z `GEMINI.md` do lokalnego agenta jako PDP (Policy Decision Point) poprzez *Custom Instructions* w Cline.
+
+**Status:** Repozytorium zaktualizowane, przygotowane do pobrania (git pull) i konfiguracji na stacji roboczej PC.
+
+---
+
 ## [2026-05-19] - Mac Session: Job Market Radar & Gap Analysis
 **Wykonane zadania:**
 1. **Analiza Rynku:** Przeanalizowano ogłoszenia na stanowiska Junior Cyber Security Analyst (Bayer), IAM Quality Specialist (Antal) oraz IAM Cloud Engineer (Antal).
