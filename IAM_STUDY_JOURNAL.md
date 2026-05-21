@@ -4,8 +4,22 @@ This study journal is a dedicated log for tracking my professional pivot from AM
 
 
 
+### [2026-05-21] Automated Security Operations (SOAR) & Integration Strategy
 
+1. **Security Orchestration, Automation, and Response (SOAR)**
+   - **Definition:** A stack of compatible software programs that enables organizations to collect data about security threats and respond to security events automatically.
+   - **Why it matters:** In modern SecOps, manual threat management is too slow. Implementing SOAR workflows (e.g., via Azure Logic Apps) allows automated incident mitigation, reducing MTTD/MTTR (Mean Time to Detect/Respond).
+   - **AML Analogy:** **"Automated Transaction Blocking"** – when a transaction monitoring system detects a high-severity alert (e.g., sanctioned country mismatch) and automatically freezes the account/payment immediately, rather than waiting for an analyst to manually review it the next day.
 
+2. **Integration Architecture (Native SOAR vs. General-Purpose Automation)**
+   - **Definition:** Choosing native cloud security integrations (like Azure Logic Apps or Microsoft Sentinel playbooks) over generic workflow orchestrators (like n8n) for production SecOps.
+   - **Why it matters:** Enterprise environments require strict compliance, auditing, and identity isolation. Native integrations inherit the platform's security boundaries (Managed Identities, RBAC) out-of-the-box, whereas generic tools require external API credentials and expand the attack surface.
+   - **AML Analogy:** **"Standard Banking Software Integration"** – using native, pre-audited plugins for Oracle Mantas or Actimize to communicate with core banking ledgers, rather than building custom webhooks using Zapier, which compliance officers would reject immediately due to audit concerns.
+
+3. **Retrieval-Augmented Generation (RAG) in Security Operations**
+   - **Definition:** An AI framework for retrieving facts from an external knowledge base to ground the LLM's responses, ensuring accuracy and reducing hallucinations.
+   - **Why it matters:** In SecOps, RAG can query internal security playbooks, network diagrams, and compliance documents to assist analysts in triaging alerts. However, it is an advanced optimization layer (cognitive assistant) rather than a foundational infrastructure or identity control.
+   - **AML Analogy:** **"Compliance Search Engine"** – an internal tool that allows AML analysts to query the bank's KYC policies and national regulator guides to quickly decide if a specific corporate structure requires EDD, rather than memorizing the entire handbook.
 
 ---
 

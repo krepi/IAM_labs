@@ -6,6 +6,15 @@ Ten plik służy do przekazywania kontekstu między agentami AI pracującymi na 
 
 ---
 
+## [2026-05-21] - Mac Session: SOAR & RAG in SecOps
+**Wykonane zadania:**
+1. **Rozbudowa Dziennika Nauki:** Zaktualizowano `IAM_STUDY_JOURNAL.md` o pojęcia dotyczące Security Orchestration, Automation, and Response (SOAR), wybór architektury integracji (Native SOAR vs. General-Purpose Automation) oraz koncepcję RAG w operacjach bezpieczeństwa, z zachowaniem analogii do systemów AML.
+2. **Synchronizacja Git:** Przygotowano i wypchnięto zmiany na repozytorium GitHub na gałęzi `az104_foundations`.
+
+**Status:** Sesja Mac zakończona, repozytorium zaktualizowane.
+
+---
+
 ## [2026-05-20] - Mac Session: Local LLM Integration & DR Planning
 **Wykonane zadania:**
 1. **Analiza Antigravity 2:** Omówiono architekturę nowo wydanej wersji Antigravity 2 (narzędzie standalone, dynamiczne subagenty, silnik Gemini 3.5 Flash).
