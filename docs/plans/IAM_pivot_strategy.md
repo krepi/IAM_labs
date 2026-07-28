@@ -1,9 +1,9 @@
-# Strategia Rozwoju Zawodowego i Budowania Wiarygodności Eksperckiej (2026)
-## Kierunek: Cloud Security & Identity and Access Management (IAM)
+# Strategia Rozwoju Zawodowego (2026-2028)
+## Kierunek: Secure Enterprise Backend (Java & Spring Boot) z wyróżnikiem Cloud Security & IAM
 
-W roku 2026 sektor Identity & Access Management (IAM) przestał być jedynie nudną funkcją administracyjną, stając się "kręgosłupem" bezpieczeństwa w architekturze Zero Trust. W dobie wszechobecnych agentów AI i rozproszonej infrastruktury chmurowej, tożsamość jest nowym perymetrem. 
+W horyzoncie lat 2026-2028 budujemy Twój profil zawodowy w oparciu o bezpieczny rozwój aplikacji enterprise. Łączymy dojrzałość życiową (wojsko, AML) ze stabilnym i przewidywalnym wejściem w ekosystem Java + Spring Boot, wykorzystując chmurę Azure i IAM jako potężną przewagę nad konkurencją na rynku.
 
-Niniejszy plan pozycjonuje Cię w elicie finansowej rynku technologicznego, łącząc wojskową dyscyplinę (17 lat w Marynarce Wojennej), precyzję AML oraz nowoczesny warsztat inżynieryjny w chmurze Microsoft Azure.
+Ten dwuletni plan zakłada pełny balans z życiem rodzinnym (Baby-Friendly) – bez niezdrowej presji, za to z naciskiem na jakość kodu, automatyzację i głębokie rozumienie bezpieczeństwa aplikacji.
 
 ---
 
@@ -90,32 +90,39 @@ Aby pokonać nieufność rekruterów, musisz dostarczyć projekty rozwiązujące
 
 ---
 
-## 6. Harmonogram Egzekucji „Baby-Friendly” (Micro-Learning)
+## 6. Harmonogram Egzekucji „Baby-Friendly” (2026 - 2028)
 
-Jako nowy tata i inżynier w procesie pivotu, musisz stosować **Micro-Learning** — krótkie sesje (15-30 minut) zorientowane na realizację konkretnego celu, zamiast długich maratonów.
+Dwuletni horyzont czasowy pozwala na zrównoważony rozwój bez wypalenia i z zachowaniem priorytetu dla rodziny. Dzielimy naukę na dwa równoległe, niekolidujące ze sobą nurty:
+
+### 1. Nurt Główny (Osobne repozytorium Java)
+*   **Java Core (Q3-Q4 2026):** Solidne opanowanie języka i dobrych praktyk.
+*   **Spring Boot Foundations (Q1-Q2 2027):** Tworzenie pierwszych API, testów i bazy danych (migration DishDock).
+*   **Enterprise Features & Security (Q3-Q4 2027):** Spring Security, OAuth2, integracje z Entra ID/Keycloak, Docker.
+*   **Full Projects & Portfolio (2028):** Wdrożenie gotowych aplikacji w chmurze Azure, optymalizacja.
+
+### 2. Nurt Companion (To repozytorium: `IAM_labs`)
+*   **AZ-104 (Q3 2026 - Q2 2027):** Spokojne dokończenie labów chmurowych w tempie 1-2 commitów w tygodniu.
+*   **SC-300 (Q3 2027 - Q4 2027):** Przygotowanie do certyfikatu i egzamin w listopadzie 2027 (lub z opcją na 2028 w zależności od postępów).
+*   **Automatyzacja & IaC:** Rozwijanie skryptów pomocniczych w PowerShell / Azure CLI, które ułatwią pracę z chmurą.
 
 ```mermaid
 gantt
-    title Harmonogram Pivotu 2026
+    title Harmonogram Pivotu 2026-2028
     dateFormat  YYYY-MM
-    section Faza 1
-    Podstawy & Uporządkowanie Labów (SC-900 theory / PowerShell) :active, 2026-05, 2026-06
-    section Faza 2
-    Deep Dive AZ-104 (Infrastruktura, PowerShell, Bicep)     :2026-06, 2026-09
-    section Faza 3
-    Specjalizacja SC-300 (Entra ID, PIM, Conditional Access) :2026-09, 2026-11
-    section Faza 4
-    Certyfikacja SC-300 & Ofensywa Rekrutacyjna (Calendly/Loom) :2026-11, 2026-12
+    section Nurt Java (Main)
+    Java Core (Zajavka)               :active, 2026-07, 2026-12
+    Spring Boot Foundations           :2027-01, 2027-06
+    Spring Security & Advanced Java   :2027-07, 2027-12
+    Portfolio & Integracje Cloud      :2028-01, 2028-06
+    section Nurt Cloud (IAM Labs)
+    AZ-104 Labs (PowerShell)          :active, 2026-07, 2027-06
+    SC-300 Preparation                :2027-07, 2027-11
+    Certyfikacja & Wdrożenia API      :2027-11, 2028-06
 ```
-
-### Fazy Działania:
-* **Miesiąc 1**: Konsolidacja repozytorium `IAM_labs`, zmapowanie AML $\to$ IAM w Study Journal, opanowanie podstaw PowerShell.
-* **Miesiące 2-4 (AZ-104)**: Skupienie na Networking i Compute. Pierwsze laby IaC oraz automatyzacji procesów.
-* **Miesiące 5-6 (SC-300)**: Budowanie zaawansowanych labów w Entra ID (PIM, Conditional Access), publiczna dokumentacja i diagramy.
-* **Listopad 2026**: Egzamin SC-300. Pełna ofensywa na LinkedIn z wykorzystaniem statusu "Cleared Veteran".
 
 ---
 
 > [!IMPORTANT]
 > **Zasada Kumulacji Commitów (zgodnie z RULE[GEMINI.md])**:
 > Aby utrzymać czystą historię repozytorium, zmiany w dokumentacji i kodzie synchronizujemy zbiorczo na koniec sesji roboczej lub na wyraźne polecenie ("wypchnij"). Unikamy cząstkowych `git push` po drobnych edycjach.
+

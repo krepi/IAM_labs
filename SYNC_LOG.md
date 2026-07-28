@@ -6,6 +6,17 @@ Ten plik służy do przekazywania kontekstu między agentami AI pracującymi na 
 
 ---
 
+## [2026-07-28] - Mac Session: Resuming & Strategy Update (Road to Java)
+**Wykonane zadania:**
+1. **Dwuletni Horyzont (2026-2028):** Oficjalnie wydłużono ramy czasowe planu do połowy 2028 roku w celu zachowania pełnego balansu z życiem rodzinnym (Baby-Friendly).
+2. **Aktualizacja Strategii:** Zaktualizowano `docs/plans/IAM_pivot_strategy.md` o podejście hybrydowe: Java/Spring Boot backend enterprise jako główny napęd (osobne repozytorium) oraz chmura/IAM (to repozytorium: AZ-104 oraz SC-300 w tempie "slow-burn").
+3. **Szablon GEMINI.md dla projektu Java:** Utworzono plik `docs/plans/java_project_gemini.md` z zestawem reguł i planem (Zajavka -> Spring Boot -> migracja DishDock) do skopiowania do nowego repozytorium Java na Windowsie.
+4. **Synchronizacja Git:** Przygotowano zmiany do wypchnięcia na GitHub w celu zsynchronizowania stanu z maszyny Mac do Windows.
+
+**Status:** Prace strategiczne zakończone. Gotowość do powrotu do laboratoriów AZ-104 (start od Lab 03 w kolejnych sesjach).
+
+---
+
 ## [2026-05-21] - Mac Session: SOAR & RAG in SecOps
 **Wykonane zadania:**
 1. **Rozbudowa Dziennika Nauki:** Zaktualizowano `IAM_STUDY_JOURNAL.md` o pojęcia dotyczące Security Orchestration, Automation, and Response (SOAR), wybór architektury integracji (Native SOAR vs. General-Purpose Automation) oraz koncepcję RAG w operacjach bezpieczeństwa, z zachowaniem analogii do systemów AML.
